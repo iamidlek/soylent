@@ -1,6 +1,5 @@
 # intro your self
 
-<<<<<<< HEAD
 <br>
 
 # KANG DAHYUN
@@ -13,7 +12,7 @@
 
 <br>
 
-- <comment>
+- comment
 잘 부탁드립니다.
 
 
@@ -29,6 +28,7 @@
 
 잘 부탁드립니다.
 
+<br>
 
 안녕하세요.
 
