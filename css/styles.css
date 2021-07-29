@@ -1,6 +1,6 @@
 /* 형철 */
 body {
-  font-family: Apercu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-family: Apercu,-apple-system,BlinkMacSystemFont,Segoe UI,'Roboto Mono', monospace,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -26,7 +26,6 @@ a{
   color: #505050;
 }
 .main__header {
-  position: relative;
   background-color: #fff;
   border-bottom: 1px solid #DBDBDB;
 }
@@ -37,6 +36,7 @@ a{
   height: 100px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .header__bar .header__logo {
   margin: auto 0;
@@ -99,8 +99,7 @@ a{
   max-width: 880px;
   padding: 0 30px;
   position: absolute;
-  top: 0;
-  left: 215px;
+  left: 185px;
 }
 .header__navbox .header__menu {
   display: flex;
@@ -111,7 +110,7 @@ a{
   color: #212322;
   font-size: 13px;
   font-weight: 700;
-  margin-right: 25px;
+  margin-right: 27px;
   letter-spacing: 1px;
   cursor: pointer;
   display: block;
