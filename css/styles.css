@@ -1,6 +1,6 @@
 /* 형철 */
 body {
-  font-family: Apercu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-family: Apercu,-apple-system,BlinkMacSystemFont,Segoe UI,'Roboto Mono', monospace,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -26,7 +26,6 @@ a{
   color: #505050;
 }
 .main__header {
-  position: relative;
   background-color: #fff;
   border-bottom: 1px solid #DBDBDB;
 }
@@ -37,6 +36,7 @@ a{
   height: 100px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .header__bar .header__logo {
   margin: auto 0;
@@ -99,8 +99,7 @@ a{
   max-width: 880px;
   padding: 0 30px;
   position: absolute;
-  top: 0;
-  left: 215px;
+  left: 185px;
 }
 .header__navbox .header__menu {
   display: flex;
@@ -111,7 +110,7 @@ a{
   color: #212322;
   font-size: 13px;
   font-weight: 700;
-  margin-right: 25px;
+  margin-right: 27px;
   letter-spacing: 1px;
   cursor: pointer;
   display: block;
@@ -131,7 +130,74 @@ a{
 .header__menu .menu__items{
   display: none;
 }
-
+/* signboard */
+.signboard {
+  height: 650px;
+  background-image: url("../assets/img/Endpoint-Soylent.jpg");
+  background-repeat: stretch;
+  background-size: cover;
+  background-position: left;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.signboard .signboard__container {
+  margin: 0 auto;
+}
+.signboard__container .signboard__box {
+  width: 500px;
+  height: 490px;
+  border: 4px solid #212322;
+  background-color: #B9E8A2;
+  margin-right: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0.98;
+  box-sizing: border-box;
+}
+.signboard__box .signboard__items {
+  padding: 73px 55px;
+}
+.signboard__box .signboard__items h1 {
+  color: #212322;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+.signboard__box .signboard__items p {
+  color: #212322;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 50px;
+}
+.signboard__box .signboard__items .border--move{
+  border: 2px solid #212322;
+  width: max-content;
+}
+.signboard__box .signboard__items a {
+  display: flex;
+  align-items: center;
+  width: 195px;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-left: 22px;
+}
+.signboard__box .signboard__items a h3 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding-right: 22px;
+}
+.signboard__box .signboard__items a img {
+  display: block;
+  width: auto;
+}
 
 
 
