@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -28,15 +29,29 @@
       <div class="header__bar">
         <a class="header__logo" href="/"><img src="assets/Soylent.png" alt="Soylent logo"></a>
         <div class="header_search">
-          <a href="javascript:void(0)">STORE LOCATOR</a>
+          <a class="header_search_link" href="javascript:void(0)">STORE LOCATOR</a>
           <div class="country-flag">
             <div class="default-lang">
               <img src="assets/img/flag_america.png" alt="language">
               <div class="material-icons">expand_more</div>
             </div>
             <ul class="flag__list">
-              <li>United States <img src="assets/img/flag_america.png" alt="america"></li>
-              <li>Canada <img src="assets/img/flag_canada.png" alt="canada"> </li>
+              <li>
+                <a class="flag__link" href="javascript:void(0)">
+                  <div class="flag__item">
+                    <p>United States</p>
+                    <img src="assets/img/flag_america.png" alt="america">
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="flag__link" href="javascript:void(0)">
+                  <div class="flag__item">
+                    <p>Canada</p>
+                    <img src="assets/img/flag_canada.png" alt="canada">
+                  </div>
+                </a>
+              </li>
             </ul>
           </div>
           <a class="sign-in material-icons" href="javascript:void(0)">person_outline</a>
@@ -55,7 +70,7 @@
               <div class="menu__items">
                 <ul>
                   <li>
-                    <img src="" alt="">
+                    <img src="assets/img/tabs/drink1.jpg" alt="drink1">
                     <h3>Complete Meal</h3>
                     <p>No time, no problem! Complete, drinkable meal.</p>
                   </li>
