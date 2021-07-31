@@ -73,6 +73,10 @@ a{
   letter-spacing: 1px;
   border-right: 1px solid #e7e7e7;
 }
+.header_search .header_search_link.mousedowneff{
+  transition:color 0.3s;
+  color: #58c223;
+}
 .header_search .country-flag {
   display: flex;
   align-items: center;
@@ -167,17 +171,23 @@ a{
   align-items: center;
 }
 .header__menu > li{
+  margin-right: 28px;
+  cursor: pointer;
+  padding: auto 0;
+}
+.header__menu > li .menu__namae{
   color: #212322;
   font-size: 13px;
-  font-weight: 700;
-  margin-right: 28px;
   letter-spacing: 1px;
-  cursor: pointer;
+  font-weight: 700;
   height: 100px;
-  padding: auto 0;
   display: flex;
   align-items: center;
   position: relative;
+}
+.header__menu > li .menu__namae.mousedowneff{
+  transition:color 0.3s;
+  color: #58c223;
 }
 .header__menu .material-icons {
   font-size: 18px;
@@ -239,6 +249,10 @@ a{
 
 /* Menu items */
 .header__menu .menu__items{
+  display: none;
+}
+
+.header__menu .menu__items li:nth-child(2) ~ li:last-child{
   display: none;
 }
 
