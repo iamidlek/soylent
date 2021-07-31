@@ -17,13 +17,14 @@ a{
 }
 
 /* HEADER */
-
 .notice__banner{
   height: 60px;
   background-color: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 .notice__banner p {
   font-size: 14px;
@@ -32,10 +33,10 @@ a{
 
 /* MAIN HEADER */
 .main__header {
-  position: fixed;  /* js로 스크롤 1이상이면 fix로 변환 */
-  z-index: 5;
+  position: fixed;
+  z-index: 3;
   width: 100%;
-  top:60px;            /* top 0으로 transition */
+  top:60px;
   background-color: #fff;
   border-bottom: 1px solid #DBDBDB;
 }
@@ -47,7 +48,7 @@ a{
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  position: relative; /* 필수 불가결 */
+  position: relative;
 }
 .header__bar .header__logo {
   margin: auto 0;
@@ -75,12 +76,12 @@ a{
 .header_search .country-flag {
   display: flex;
   align-items: center;
+  margin-left: 25px;
 }
 .header_search .country-flag .default-lang {
   cursor: pointer;
   padding-top: 40px;
   padding-bottom: 35px;
-  margin-left: 25px;
 }
 .header_search .country-flag .default-lang img {
   width: 23px;
@@ -92,15 +93,21 @@ a{
 
 /* country-flag 리스트 */
 .country-flag .flag__list{
+  position: absolute;
   display: flex;
   flex-direction: column;
   padding-top: 22px;
   padding-bottom: 8px;
-  position: absolute;
-  top: -10px;
+  top: -60px;
   right:166px;
-  opacity: 0.4;
   z-index: -1;
+  opacity: 0;
+}
+.country-flag:hover .flag__list {
+  transition: .4s;
+  top: 76px;
+  z-index: 1;
+  opacity: 1;
 }
 .country-flag .flag__list .flag__link{
   display: flex;
@@ -200,6 +207,7 @@ a{
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 .signboard .signboard__container {
   margin: 0 auto;
