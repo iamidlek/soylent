@@ -26,4 +26,29 @@ window.addEventListener('scroll', _.throttle(function (){
 },10));
 
 
+// 클릭시 텍스트에 글씨 변화 (하나만 켜지게)
+const pEls = document.querySelectorAll('.menu__namae');
+const pEl6 = document.querySelector('.header_search_link');
+
+pEl6.addEventListener('mousedown', function () {
+  for(let i = 0; i < pEls.length; i++){
+    if (pEls[i].classList.contains('mousedowneff')){
+      pEls[i].classList.remove('mousedowneff')
+     };
+  }
+  pEl6.classList.add('mousedowneff');
+});
+
+for(let i = 0; i < pEls.length; i++){
+  pEls[i].addEventListener('mousedown', function () {
+    for(let r = 0; r < pEls.length; r++){
+      if (pEls[r].classList.contains('mousedowneff')){
+        pEls[r].classList.remove('mousedowneff')
+       };
+    }
+    pEl6.classList.remove('mousedowneff');
+    pEls[i].classList.add('mousedowneff');
+  });
+};
+
 
