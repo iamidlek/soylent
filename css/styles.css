@@ -17,13 +17,14 @@ a{
 }
 
 /* HEADER */
-
 .notice__banner{
   height: 60px;
   background-color: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 .notice__banner p {
   font-size: 14px;
@@ -32,10 +33,10 @@ a{
 
 /* MAIN HEADER */
 .main__header {
-  position: fixed;  /* js로 스크롤 1이상이면 fix로 변환 */
-  z-index: 5;
+  position: fixed;
+  z-index: 3;
   width: 100%;
-  top:60px;            /* top 0으로 transition */
+  top:60px;
   background-color: #fff;
   border-bottom: 1px solid #DBDBDB;
 }
@@ -47,7 +48,7 @@ a{
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  position: relative; /* 필수 불가결 */
+  position: relative;
 }
 .header__bar .header__logo {
   margin: auto 0;
@@ -72,15 +73,19 @@ a{
   letter-spacing: 1px;
   border-right: 1px solid #e7e7e7;
 }
+.header_search .header_search_link.mousedowneff{
+  transition:color 0.3s;
+  color: #58c223;
+}
 .header_search .country-flag {
   display: flex;
   align-items: center;
+  margin-left: 25px;
 }
 .header_search .country-flag .default-lang {
   cursor: pointer;
   padding-top: 40px;
   padding-bottom: 35px;
-  margin-left: 25px;
 }
 .header_search .country-flag .default-lang img {
   width: 23px;
@@ -92,15 +97,21 @@ a{
 
 /* country-flag 리스트 */
 .country-flag .flag__list{
+  position: absolute;
   display: flex;
   flex-direction: column;
   padding-top: 22px;
   padding-bottom: 8px;
-  position: absolute;
-  top: -10px;
+  top: -60px;
   right:166px;
-  opacity: 0.4;
   z-index: -1;
+  opacity: 0;
+}
+.country-flag:hover .flag__list {
+  transition: .4s;
+  top: 76px;
+  z-index: 1;
+  opacity: 1;
 }
 .country-flag .flag__list .flag__link{
   display: flex;
@@ -132,7 +143,6 @@ a{
   width: 30px;
   padding: 10px 20px;
 }
-
 .header_search .sign-in.material-icons{
   font-size: 32px;
   padding: 20px 0;
@@ -154,37 +164,95 @@ a{
   max-width: 880px;
   padding: 0 30px;
   position: absolute;
-  left: 185px;
+  left: 190px;
 }
 .header__navbox .header__menu {
   display: flex;
   align-items: center;
-  height: 100px;
 }
 .header__menu > li{
+  margin-right: 28px;
+  cursor: pointer;
+  padding: auto 0;
+}
+.header__menu > li .menu__namae{
   color: #212322;
   font-size: 13px;
-  font-weight: 700;
-  margin-right: 27px;
   letter-spacing: 1px;
-  cursor: pointer;
-  display: block;
-}
-.header__menu > li:first-child,
-.header__menu > li:nth-child(2),
-.header__menu > li:last-child{
+  font-weight: 700;
+  height: 100px;
   display: flex;
   align-items: center;
+  position: relative;
 }
-
+.header__menu > li .menu__namae.mousedowneff{
+  transition:color 0.3s;
+  color: #58c223;
+}
 .header__menu .material-icons {
   font-size: 18px;
   margin-left: 1px;
   padding-top: 2px;
 }
+.header__menu li:hover .material-icons {
+  transform: rotate(180deg);
+}
+.header__menu > li:first-child:hover p::after
+{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -18px;
+  width: 94px;
+  border-bottom: 3px solid #85BA13;
+}
+.header__menu > li:nth-child(2):hover p::after{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -14px;
+  width: 108px;
+  border-bottom: 3px solid #85BA13;
+}
+.header__menu > li:nth-child(3):hover p::after{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -14px;
+  width: 62px;
+  border-bottom: 3px solid #85BA13;
+}
+.header__menu > li:nth-child(4):hover p::after{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -12px;
+  width: 68px;
+  border-bottom: 3px solid #85BA13;
+}
+.header__menu > li:nth-child(5):hover p::after{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -14px;
+  width: 88px;
+  border-bottom: 3px solid #85BA13;
+}
+.header__menu > li:last-child:hover p::after{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -14px;
+  width: 88px;
+  border-bottom: 3px solid #85BA13;
+}
 
 /* Menu items */
 .header__menu .menu__items{
+  display: none;
+}
+
+.header__menu .menu__items li:nth-child(2) ~ li:last-child{
   display: none;
 }
 
@@ -200,6 +268,7 @@ a{
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 .signboard .signboard__container {
   margin: 0 auto;
