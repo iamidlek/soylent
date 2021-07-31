@@ -6,16 +6,19 @@ const mainHeaderEl = document.querySelector('.main__header');
   //lodash cdn → _.throttle(함수,시간) 이용  
   // gsap.to(요소,지속시간, 옵션)
 window.addEventListener('scroll', _.throttle(function (){
-  console.log(window.scrollY)
   if (window.scrollY <= 5){
     gsap.to(mainHeaderEl, 0.1,{
       top: '60px',
     });
-  } else if (window.scrollY > 1 && window.scrollY <= 40){
+  } else if (window.scrollY > 5 && window.scrollY <= 40){
     gsap.to(mainHeaderEl, 0.1,{
-      top: '30px',
+      top: '35px',
     });
-  } else if (window.scrollY > 40){
+  } else if (window.scrollY > 40 && window.scrollY <= 58){
+    gsap.to(mainHeaderEl, 0.1,{
+      top: '15px',
+    });  
+  } else if (window.scrollY > 58){
     gsap.to(mainHeaderEl, 0.1,{
       top: '0',
     });
