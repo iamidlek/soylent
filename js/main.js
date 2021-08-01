@@ -64,6 +64,11 @@ const wrapEls = document.querySelector('.main__header .wrapper');
 const wrap2El = document.querySelector('.main__header .wrap2');
 const wrap3El = document.querySelector('.main__header .wrap3');
 
+  // 유지 대상
+const veEl = document.querySelector('.ve');
+const ve2El = document.querySelector('.ve2');
+const ve3El = document.querySelector('.ve3');
+
 // hover 만 했을때
 btndrinkEls.addEventListener('mouseover',function () {
   wrapEls.classList.add('hovered')
@@ -71,15 +76,20 @@ btndrinkEls.addEventListener('mouseover',function () {
 btndrinkEls.addEventListener('mouseout',function () {
   wrapEls.classList.remove('hovered')
 });
-
-// 마우스를 내려 확인 할때
+// 내려온 메뉴 요소 위에 있을 때
 wrapEls.addEventListener('mouseover',function () {
   wrapEls.classList.add('hovered')
 });
 wrapEls.addEventListener('mouseout',function () {
   wrapEls.classList.remove('hovered')
 });
-
+// 녹색 밑줄 유지
+wrapEls.addEventListener('mouseover',function () {
+  veEl.classList.add('ac')
+});
+wrapEls.addEventListener('mouseout',function () {
+  veEl.classList.remove('ac')
+});
 
 // powder 동일 
 btnpowderEls.addEventListener('mouseover',function () {
@@ -94,6 +104,12 @@ wrap2El.addEventListener('mouseover',function () {
 wrap2El.addEventListener('mouseout',function () {
   wrap2El.classList.remove('hovered')
 });
+wrap2El.addEventListener('mouseover',function () {
+  ve2El.classList.add('ac')
+});
+wrap2El.addEventListener('mouseout',function () {
+  ve2El.classList.remove('ac')
+});
 // learn 동일
 btnlearnEls.addEventListener('mouseover',function () {
   wrap3El.classList.add('hovered')
@@ -106,4 +122,10 @@ wrap3El.addEventListener('mouseover',function () {
 });
 wrap3El.addEventListener('mouseout',function () {
   wrap3El.classList.remove('hovered')
+});
+wrap3El.addEventListener('mouseover',function () {
+  ve3El.classList.add('ac')
+});
+wrap3El.addEventListener('mouseout',function () {
+  ve3El.classList.remove('ac')
 });

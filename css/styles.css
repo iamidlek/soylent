@@ -197,7 +197,9 @@ a{
 .header__menu li:hover .material-icons {
   transform: rotate(180deg);
 }
-.header__menu > li:first-child:hover .menuitemname::after
+/* 버튼 밑 녹색 줄 */
+.header__menu > li:first-child:hover .ve,
+.header__menu > li:first-child .ve.ac
 {
   content: '';
   position: absolute;
@@ -206,7 +208,8 @@ a{
   width: 94px;
   border-bottom: 3px solid #85BA13;
 }
-.header__menu > li:nth-child(2):hover .menuitemname::after{
+.header__menu > li:nth-child(2):hover .ve2,
+.header__menu > li:nth-child(2) .ve2.ac{
   content: '';
   position: absolute;
   bottom: -1px;
@@ -238,7 +241,8 @@ a{
   width: 88px;
   border-bottom: 3px solid #85BA13;
 }
-.header__menu > li:last-child:hover .menuitemname::after{
+.header__menu > li:last-child:hover .ve3,
+.header__menu > li:last-child .ve3.ac{
   content: '';
   position: absolute;
   bottom: -1px;
