@@ -49,6 +49,7 @@ a{
   justify-content: space-between;
   background-color: #fff;
   position: relative;
+  left: -5px;
 }
 .header__bar .header__logo {
   margin: auto 0;
@@ -491,20 +492,20 @@ a{
   background-position: left;
   margin-top: 100px;
   margin-bottom: 50px;
+}
+.signboard .signboard__container {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
-}
-.signboard .signboard__container {
-  margin: 0 auto;
 }
 .signboard__container .signboard__box {
   width: 505px;
   height: 495px;
   border: 4px solid #212322;
   background-color: #B9E8A2;
-  margin-right: 600px;
+  margin-top: 5.9%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -601,6 +602,46 @@ a:hover .border-move{
 }
 .shopnow__items a:hover .arrow-head{
   left: 70px;
+}
+
+/* 슬라이드 디스플레이 영역 */
+.display-booth .container{
+  height: 880px;
+  padding-top: 30px;
+}
+.display-booth .inner{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.display-booth .inner > h1{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+}
+.display-stand .display-tab ul{
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  color: #8C8C8C;
+}
+.display-stand .display-tab ul li{
+  margin-right: 26px;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.display-stand .display-tab ul li.clicked{
+  color: #181A19;
+  font-size: 20px;
+  text-decoration:underline 2px #58c223;
+  text-underline-position: under;
+}
+
+/* slider box 1 */
+.sliderbox1 p{
+  font-size: 18px;
+  color: #595959;
 }
 
 /* 다현 */
