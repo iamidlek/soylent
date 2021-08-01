@@ -52,3 +52,58 @@ for(let i = 0; i < pEls.length; i++){
 };
 
 
+// 드롭리스트가 있는 메뉴에 mouse over 하면 보여지기
+
+  // 이벤트리스너 대상
+const btndrinkEls = document.querySelector('.drinks');
+const btnpowderEls = document.querySelector('.powders');
+const btnlearnEls = document.querySelector('.learns');
+
+  // 변경 대상
+const wrapEls = document.querySelector('.main__header .wrapper');
+const wrap2El = document.querySelector('.main__header .wrap2');
+const wrap3El = document.querySelector('.main__header .wrap3');
+
+// hover 만 했을때
+btndrinkEls.addEventListener('mouseover',function () {
+  wrapEls.classList.add('hovered')
+});
+btndrinkEls.addEventListener('mouseout',function () {
+  wrapEls.classList.remove('hovered')
+});
+
+// 마우스를 내려 확인 할때
+wrapEls.addEventListener('mouseover',function () {
+  wrapEls.classList.add('hovered')
+});
+wrapEls.addEventListener('mouseout',function () {
+  wrapEls.classList.remove('hovered')
+});
+
+
+// powder 동일 
+btnpowderEls.addEventListener('mouseover',function () {
+  wrap2El.classList.add('hovered')
+});
+btnpowderEls.addEventListener('mouseout',function () {
+  wrap2El.classList.remove('hovered')
+});
+wrap2El.addEventListener('mouseover',function () {
+  wrap2El.classList.add('hovered')
+});
+wrap2El.addEventListener('mouseout',function () {
+  wrap2El.classList.remove('hovered')
+});
+// learn 동일
+btnlearnEls.addEventListener('mouseover',function () {
+  wrap3El.classList.add('hovered')
+});
+btnlearnEls.addEventListener('mouseout',function () {
+  wrap3El.classList.remove('hovered')
+});
+wrap3El.addEventListener('mouseover',function () {
+  wrap3El.classList.add('hovered')
+});
+wrap3El.addEventListener('mouseout',function () {
+  wrap3El.classList.remove('hovered')
+});

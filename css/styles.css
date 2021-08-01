@@ -38,7 +38,7 @@ a{
   width: 100%;
   top:60px;
   background-color: #fff;
-  border-bottom: 1px solid #DBDBDB;
+  border-bottom: 1.2px solid #DBDBDB;
 }
 .main__header .header__bar {
   max-width: 1280px;
@@ -162,7 +162,7 @@ a{
 /* HEADER NAVBOX */
 .header__navbox {
   max-width: 880px;
-  padding: 0 30px;
+  padding: 0 110px;
   position: absolute;
   left: 190px;
 }
@@ -197,7 +197,7 @@ a{
 .header__menu li:hover .material-icons {
   transform: rotate(180deg);
 }
-.header__menu > li:first-child:hover p::after
+.header__menu > li:first-child:hover .menuitemname::after
 {
   content: '';
   position: absolute;
@@ -206,7 +206,7 @@ a{
   width: 94px;
   border-bottom: 3px solid #85BA13;
 }
-.header__menu > li:nth-child(2):hover p::after{
+.header__menu > li:nth-child(2):hover .menuitemname::after{
   content: '';
   position: absolute;
   bottom: -1px;
@@ -214,7 +214,7 @@ a{
   width: 108px;
   border-bottom: 3px solid #85BA13;
 }
-.header__menu > li:nth-child(3):hover p::after{
+.header__menu > li:nth-child(3):hover .menuitemname::after{
   content: '';
   position: absolute;
   bottom: -1px;
@@ -222,7 +222,7 @@ a{
   width: 62px;
   border-bottom: 3px solid #85BA13;
 }
-.header__menu > li:nth-child(4):hover p::after{
+.header__menu > li:nth-child(4):hover .menuitemname::after{
   content: '';
   position: absolute;
   bottom: -1px;
@@ -230,7 +230,7 @@ a{
   width: 68px;
   border-bottom: 3px solid #85BA13;
 }
-.header__menu > li:nth-child(5):hover p::after{
+.header__menu > li:nth-child(5):hover .menuitemname::after{
   content: '';
   position: absolute;
   bottom: -1px;
@@ -238,7 +238,7 @@ a{
   width: 88px;
   border-bottom: 3px solid #85BA13;
 }
-.header__menu > li:last-child:hover p::after{
+.header__menu > li:last-child:hover .menuitemname::after{
   content: '';
   position: absolute;
   bottom: -1px;
@@ -248,14 +248,236 @@ a{
 }
 
 /* Menu items */
-.header__menu .menu__items{
-  display: none;
+/* drink */
+.main__header .wrapper{
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: -390px;  /* -390  */
+  z-index: -1;
+  opacity: 0;
+}
+/* 드롭 메뉴 있는 곳에 호버하면 top 움직이게 */
+.main__header .wrapper.hovered{
+  transition: .35s;
+  top: 101px;
+  opacity: 1;
 }
 
-.header__menu .menu__items li:nth-child(2) ~ li:last-child{
-  display: none;
+.main__header .header__menu__items{
+  max-width: 1280px;
+  height: 452px;
+  display: flex;
+  padding: 0 80px;
+  margin: 0 auto;
 }
-
+/* drink tab */
+.header__menu__items .drink{
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: flex-start;
+  position: absolute;
+  top: 48px;
+}
+.header__menu__items .drink ul{
+  display: flex;
+}
+.header__menu__items .drink ul li a{
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+}
+.header__menu__items .drink > ul > li:nth-child(2) a,
+.header__menu__items .drink > ul > li:nth-child(3) a{
+  padding-left: 42px;
+}
+.header__menu__items .drink ul li img{
+  width: 290px;
+  height: 270px;
+}
+.header__menu__items .drink ul li h3{
+  margin-top: 14px;
+  transition: .3s;
+}
+.header__menu__items .drink ul li a:hover h3{
+  color: #58c223;
+}
+.header__menu__items .drink ul li p{
+  width: 250px;
+  margin-top: 8px;
+  font-weight: 400;
+  color: #505050;
+}
+.header__menu__items .drink .listitems{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: 1px solid #B5B5B5;
+  margin-left: 24px;
+}
+.header__menu__items .drink .listitems li{
+  margin-left: 22px;
+  margin-bottom: 16px;
+}
+.drink .listitems li a{
+  transition: .3s;
+}
+.drink .listitems li:first-child:hover a{
+  color: #58c223;
+}
+.drink .listitems li:nth-child(2):hover a{
+  color: #58c223;
+}
+.drink .listitems li:nth-child(3):hover a{
+  color: #58c223;
+}
+.drink .listitems li:nth-child(4):hover a{
+  color: #58c223;
+}
+.drink .listitems li:last-child:hover a{
+  color: #58c223;
+}
+/* powedr */
+.main__header .wrap2{
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: -390px;  /* -390  */
+  z-index: -1;
+  opacity: 0;
+}
+.main__header .wrap2.hovered{
+  transition: .35s;
+  top: 101px;
+  opacity: 1;
+}
+.main__header .item2{
+  max-width: 1280px;
+  height: 452px;
+  display: flex;
+  padding: 0 80px;
+  margin: 0 auto;
+}
+.item2 .powder{
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: flex-start;
+  position: absolute;
+  top: 48px;
+}
+.item2 .powder ul{
+  display: flex;
+}
+.item2 .powder ul li a{
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+}
+.item2 .powder > ul > li:nth-child(2) a,
+.item2 .powder > ul > li:nth-child(3) a{
+  padding-left: 42px;
+}
+.item2 .powder ul li img{
+  height: 270px;
+  width: 290px;
+}
+.item2 .powder ul li h3{
+  margin-top: 14px;
+  transition: .3s;
+}
+.item2 .powder ul li a:hover h3{
+  color: #58c223;
+}
+.item2 .powder ul li p{
+  width: 290px;
+  margin-top: 8px;
+  font-weight: 400;
+  color: #505050;
+}
+.item2 .powder .listitems{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: 1px solid #B5B5B5;
+  margin-left: 24px;
+}
+.item2 .powder .listitems li{
+  margin-left: 22px;
+  margin-bottom: 16px;
+}
+.powder .listitems li a{
+  transition: .3s;
+}
+.powder .listitems li:first-child:hover a{
+  color: #58c223;
+}
+.powder .listitems li:last-child:hover a{
+  color: #58c223;
+}
+/* learn */
+.main__header .wrap3{
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: -390px;  /* -390  */
+  z-index: -1;
+  opacity: 0;
+}
+.main__header .wrap3.hovered{
+  transition: .35s;
+  top: 101px;
+  opacity: 1;
+}
+.main__header .item3{
+  max-width: 1280px;
+  height: 452px;
+  display: flex;
+  padding: 0 80px;
+  margin: 0 auto;
+}
+.item3 .learn{
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: flex-start;
+  position: absolute;
+  top: 48px;
+}
+.item3 .learn ul{
+  display: flex;
+}
+.item3 .learn ul li a{
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+}
+.item3 .learn > ul > li:nth-child(2) a,
+.item3 .learn > ul > li:nth-child(3) a,
+.item3 .learn > ul > li:last-child a{
+  padding-left: 42px;
+}
+.item3 .learn ul li img{
+  height: 270px;
+  width: 290px;
+}
+.item3 .learn ul li h3{
+  margin-top: 14px;
+  transition: .3s;
+}
+.item3 .learn ul li a:hover h3{
+  color: #58c223;
+}
+.item3 .learn ul li p{
+  width: 290px;
+  margin-top: 8px;
+  font-weight: 400;
+  color: #505050;
+}
 /* signboard */
 .signboard {
   height: 650px;
