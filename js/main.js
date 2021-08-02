@@ -129,3 +129,15 @@ wrap3El.addEventListener('mouseover',function () {
 wrap3El.addEventListener('mouseout',function () {
   ve3El.classList.remove('ac')
 });
+
+// display tab 클릭시 색, 언더라인
+const tabEls = document.querySelectorAll('.display-tab ul li');
+
+for(let i=0;i<tabEls.length;i++){
+  tabEls[i].addEventListener('mousedown',function () {
+    for(let m = 0; m<tabEls.length; m++){
+      tabEls[m].classList.remove('clicked');
+    };
+    tabEls[i].classList.add('clicked');
+  });
+};
