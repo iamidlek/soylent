@@ -198,6 +198,15 @@ a{
 .header__menu li:hover .material-icons {
   transform: rotate(180deg);
 }
+.header__menu > li:first-child .ve.ac + .material-icons{
+  transform: rotate(180deg);
+}
+.header__menu > li:nth-child(2) .ve2.ac + .material-icons{
+  transform: rotate(180deg);
+}
+.header__menu > li:last-child .ve3.ac + .material-icons{
+  transform: rotate(180deg);
+}
 /* 버튼 밑 녹색 줄 */
 .header__menu > li:first-child:hover .ve,
 .header__menu > li:first-child .ve.ac
@@ -617,7 +626,7 @@ a:hover .border-move{
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 .display-stand .display-tab ul{
   display: flex;
@@ -628,7 +637,7 @@ a:hover .border-move{
 .display-stand .display-tab ul li{
   margin-right: 26px;
   cursor: pointer;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .display-stand .display-tab ul li.clicked{
@@ -640,46 +649,69 @@ a:hover .border-move{
 
 /* slider box 1 */
 /* drink 가 클릭되면 sliderbox1 클래스 부여 할것 */
-.sliderbox1 p{
+.sliderbox p{
   font-size: 18px;
   color: #595959;
   margin-bottom: 16px;
+  position: relative;
 }
-.sliderbox1 .slider{
-  width: 1280px;
-  height: 580px;
+.sliderbox .slider{
+  width: 1320px;
+  height: 578px;
   overflow: hidden;
-  /* background-color: #B9E8A2; */
+  display: flex;
+  position: relative;
+  left: -20px;
+}
+.sliderbox .slider .page{
   display: flex;
 }
-.sliderbox1 .slider .page1 .slide{
-  /* 하나의 아이템의 크기 */
+.sliderbox .slider .page .slide{
+  box-sizing: border-box;
+  width: 440px;
+  height: 578px;
+  padding: 0 20px;
 }
-.sliderbox1 .slider .page1 .slide .bgimg{
+.sliderbox .slider .page .slide .bgimg{
   display: block;
   background-image: url('../assets/img/slide/black.png');
   width: 400px;
-  height: 300px;
+  height: 298px;
   margin-bottom: 16px;
   background-size: contain;
   background-position: center;
   background-color: #f7f7f7;
   cursor: pointer;
 }
-.sliderbox1 .slider .page1 .slide .bgimg:hover{
+.sliderbox .slider .page .slide .bgimg:hover{
   background-image: url('../assets/img/slide/blackc.png');
   background-size: cover;
 }
-.sliderbox1 .slider .page1 .slide .bgimg + a{
+.sliderbox .slider .page .slide2 .bgimg{
+  background-image: url('../assets/img/slide/yellow.png');
+}
+.sliderbox .slider .page .slide2 .bgimg:hover{
+  background-image: url('../assets/img/slide/yellowc.png');
+}
+.sliderbox .slider .page .slide3 .bgimg{
+  background-image: url('../assets/img/slide/blue.png');
+}
+.sliderbox .slider .page .slide3 .bgimg:hover{
+  background-image: url('../assets/img/slide/bluec.png');
+}
+.sliderbox .slider .page .slide .bgimg + a{
   display: block;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 4px;
 }
-.sliderbox1 .slider .page1 .slide .dozen{
+.sliderbox .slider .page .slide .dozen{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.slide .dozen > p{
+  margin-bottom: 12px;
 }
 .slide .dozen .evaluation{
   display: flex;
@@ -689,6 +721,7 @@ a:hover .border-move{
   font-size: 13px;
   margin-left: 6px;
   color: #8C8C8C;
+  margin-bottom: 12px;
 }
 .star{
   display: flex;
@@ -706,6 +739,7 @@ a:hover .border-move{
   display: flex;
   justify-content: flex-end;
   position: relative;
+  top: -4px;
 }
 .radiobox input,
 .radiobox input:checked{
@@ -715,7 +749,7 @@ a:hover .border-move{
 .radiobox .radios label{
   position: absolute;
   top: -5px;
-  left: 10px;
+  left: 6px;
   font-size: 18px;
 }
 .radiobox .radios label::before{
@@ -726,7 +760,7 @@ a:hover .border-move{
   border: 1px solid #181A19;
   border-radius: 100%;
   position: relative;
-  left: -6px;
+  left: -4px;
   top: 3px;
 }
 .radiobox input:checked{
@@ -736,7 +770,7 @@ a:hover .border-move{
   background: #181A19;
   position: absolute;
   top: -1px;
-  left: 3px;
+  left: 1px;
   
 }
 .radiobox .radios p{
@@ -745,6 +779,159 @@ a:hover .border-move{
 .radiobox .radios p strong{
   font-weight: 700;
   color: #181A19;
+}
+.radios .quantity{
+  display: none;
+}
+.radios .quantity2{
+  display: none;
+}
+.radios .quantity2.visual{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  top: 45px;
+  left: 0px;
+}
+.radios .quantity.visual{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  top: 75px;
+  left: 0px;
+}
+.radiobox .radios .quantity p{
+  margin-bottom: 4px;
+}
+.quantity .select-box,
+.quantity2 .select-box{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  height: 50px;
+  box-sizing: border-box;
+}
+.select-box .terms select{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  padding: 16px 21px 15px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  background-color: transparent;
+  border: 1.5px solid #181A19;
+}
+.select-box .terms div{
+  position: absolute;
+  font-size: 22px;
+  left: 71px;
+  top: 38px;
+  z-index: -1; /* 위에서 클릭시 select가 반응 */
+}
+.quantity > h4,
+.quantity2 > h4{
+  color: #595959;
+  text-align: center; /* 본인 또는 부모요소 너비 영향*/
+}
+/* 카운트, 카트에 담기 버튼 */
+.select-box .count-box{
+  display: flex;
+  width: 298px;
+  height: 50px;
+  position: relative;
+  background-color: #221f20;
+  box-sizing: border-box;
+}
+.select-box .count-box:hover{
+  background-color: #fff;
+  border: 1px solid #221f20;
+}
+.select-box .count-box .number{
+  width: 136px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select-box .count-box .number button{
+  border:none; 
+  background-color: transparent;
+  box-shadow:none;
+  height: 100%;
+  font-family: inherit;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+.select-box .count-box:hover .number button{
+  color: #221f20;
+}
+.select-box .count-box .number button.mi{
+  position: absolute;
+  font-size: 20px;
+  left: 8px;
+}
+.select-box .count-box .number button.pl{
+  position: absolute;
+  font-size: 19px;
+  right: 7px;
+}
+.select-box .count-box .number input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  display: block;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  width: 30px;
+  height: 20px;
+  color: #fff;
+  background-color: transparent;
+  border:none; 
+  box-shadow:none;
+}
+.select-box .count-box:hover .number input[type="number"]{
+  color: #221f20;
+}
+.select-box .count-box .number input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.select-box .count-box .add-cart{
+  border:none; 
+  background-color: transparent;
+  box-shadow:none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.select-box .count-box:hover .add-cart{
+  color: #221f20;
+}
+.select-box .count-box .add-cart::before{
+  content: '';
+  display:  inline-block;
+  width: 1px;
+  height: 56%;
+  position: absolute;
+  left: 0;
+  top: 11.5px;
+  background-color: #dbdbdbbd;
+}
+.select-box .count-box:hover .add-cart::before{
+  background-color: #221f20;
 }
 /* 다현 */
 

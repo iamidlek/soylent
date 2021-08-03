@@ -141,3 +141,56 @@ for(let i=0;i<tabEls.length;i++){
     tabEls[i].classList.add('clicked');
   });
 };
+
+// // 선택 이벤트 영역
+// const radioEl = document.querySelector('.radiobox1');
+// // 보일 영역
+// const area1 = document.querySelector('.radiobox1 .quantity');
+// const area2 = document.querySelector('.radiobox1 .quantity2');
+
+// radioEl.addEventListener('click', function () {
+//   // 선택된 라디오 값 확인
+//   if (document.querySelector('input[name="choice1"]:checked').value == 'once') {
+//   area1.classList.remove('visual');
+//   area2.classList.add('visual');
+//   } else {
+//     area2.classList.remove('visual');
+//     area1.classList.add('visual');
+//   }
+// });
+
+// const radio2El = document.querySelector('.radiobox2');
+// const areas1 = document.querySelector('.radiobox2 .quantity');
+// const areas2 = document.querySelector('.radiobox2 .quantity2');
+// radio2El.addEventListener('click', function () {
+//   // 선택된 라디오 값 확인
+//   if (document.querySelector('input[name="choice2"]:checked').value == 'once') {
+//     areas1.classList.remove('visual');
+//     areas2.classList.add('visual');
+//   } else {
+//     areas2.classList.remove('visual');
+//     areas1.classList.add('visual');
+//   }
+// });
+
+// 반복문을 활요한 슬라이드 라디오 버튼에 따른 폼 변경
+let pages = document.querySelectorAll('.sliderbox1 .page');
+
+let slides = 0;
+for (let i=0; i < pages.length; i++){
+  slides += (pages[i].childElementCount);
+};
+for (let i=1; i <= slides; i++){
+  let radiobox = document.querySelector(`.radiobox${i}`);
+  let subarea = document.querySelector(`.radiobox${i} .quantity`);
+  let oncearea = document.querySelector(`.radiobox${i} .quantity2`);
+  radiobox.addEventListener('click', function (){
+    if (document.querySelector(`.radiobox${i} input[name="choice${i}"]:checked`).value == 'once'){
+      subarea.classList.remove('visual');
+      oncearea.classList.add('visual');
+    } else {
+      oncearea.classList.remove('visual');
+      subarea.classList.add('visual');
+    }
+  });
+};
