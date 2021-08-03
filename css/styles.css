@@ -681,7 +681,6 @@ a:hover .border-move{
 }
 .sliderbox .slider .page .slide .bgimg{
   display: block;
-  background-image: url('../assets/img/slide/black.png');
   width: 400px;
   height: 298px;
   margin-bottom: 16px;
@@ -690,21 +689,36 @@ a:hover .border-move{
   background-color: #f7f7f7;
   cursor: pointer;
 }
-.sliderbox .slider .page .slide .bgimg:hover{
+.sliderbox1 .slider .page1 .slide .bgimg{
+  background-image: url('../assets/img/slide/black.png');
+}
+.sliderbox1 .slider .page1 .slide .bgimg:hover{
   background-image: url('../assets/img/slide/blackc.png');
   background-size: cover;
 }
-.sliderbox .slider .page .slide2 .bgimg{
+.sliderbox1 .slider .page1 .slide2 .bgimg{
   background-image: url('../assets/img/slide/yellow.png');
 }
-.sliderbox .slider .page .slide2 .bgimg:hover{
+.sliderbox1 .slider .page1 .slide2 .bgimg:hover{
   background-image: url('../assets/img/slide/yellowc.png');
 }
-.sliderbox .slider .page .slide3 .bgimg{
+.sliderbox1 .slider .page1 .slide3 .bgimg{
   background-image: url('../assets/img/slide/blue.png');
 }
-.sliderbox .slider .page .slide3 .bgimg:hover{
+.sliderbox1 .slider .page1 .slide3 .bgimg:hover{
   background-image: url('../assets/img/slide/bluec.png');
+}
+.sliderbox2 .slider .page1 .slide1 .bgimg{
+  background-image: url('../assets/img/slide/pow1f.png');
+}
+.sliderbox2 .slider .page1 .slide1 .bgimg:hover{
+  background-image: url('../assets/img/slide/pow2f.jpg');
+}
+.sliderbox2 .slider .page1 .slide2 .bgimg{
+  background-image: url('../assets/img/slide/pow3f.png');
+}
+.sliderbox2 .slider .page1 .slide2 .bgimg:hover{
+  background-image: url('../assets/img/slide/pow4f.jpg');
 }
 .sliderbox .slider .page .slide .bgimg + a{
   display: block;
