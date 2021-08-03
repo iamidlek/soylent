@@ -131,7 +131,10 @@ wrap3El.addEventListener('mouseout',function () {
 });
 
 // display tab 클릭시 색, 언더라인
+// 탭 눌렸나 확인 슬라이더 박스 보여지기
 const tabEls = document.querySelectorAll('.display-tab ul li');
+
+const slideboxELs = document.querySelectorAll('.sliderbox');
 
 for(let i=0;i<tabEls.length;i++){
   tabEls[i].addEventListener('mousedown',function () {
@@ -141,6 +144,18 @@ for(let i=0;i<tabEls.length;i++){
     tabEls[i].classList.add('clicked');
   });
 };
+
+// 해당 탭에 clicked 가 있으면 슬라이더 박스 가 보여진다.
+
+for(let i=0;i<tabEls.length;i++){
+  tabEls[i].addEventListener('click',function () {
+    for(let p=0;p<slideboxELs.length;p++){
+      slideboxELs[p].classList.remove('active');
+    }
+    slideboxELs[i].classList.add('active');
+  });
+};
+
 
 // // 선택 이벤트 영역
 // const radioEl = document.querySelector('.radiobox1');
@@ -174,23 +189,25 @@ for(let i=0;i<tabEls.length;i++){
 // });
 
 // 반복문을 활요한 슬라이드 라디오 버튼에 따른 폼 변경
-let pages = document.querySelectorAll('.sliderbox1 .page');
+for(let s=1; s <= slideboxELs.length; s++){
+  let pages = document.querySelectorAll(`.sliderbox${s} .page`);
+  let slides = 0;
+  for (let i=0; i < pages.length; i++){
+    slides += (pages[i].childElementCount);
+  };
+  for (let i=1; i <= slides; i++){
+    let radiobox = document.querySelector(`.radiobox${i}`);
+    let subarea = document.querySelector(`.radiobox${i} .quantity`);
+    let oncearea = document.querySelector(`.radiobox${i} .quantity2`);
+    radiobox.addEventListener('click', function (){
+      if (document.querySelector(`.radiobox${i} input[name="choice${i}"]:checked`).value == 'once'){
+        subarea.classList.remove('visual');
+        oncearea.classList.add('visual');
+      } else {
+        oncearea.classList.remove('visual');
+        subarea.classList.add('visual');
+      }
+    });
+  };
+}
 
-let slides = 0;
-for (let i=0; i < pages.length; i++){
-  slides += (pages[i].childElementCount);
-};
-for (let i=1; i <= slides; i++){
-  let radiobox = document.querySelector(`.radiobox${i}`);
-  let subarea = document.querySelector(`.radiobox${i} .quantity`);
-  let oncearea = document.querySelector(`.radiobox${i} .quantity2`);
-  radiobox.addEventListener('click', function (){
-    if (document.querySelector(`.radiobox${i} input[name="choice${i}"]:checked`).value == 'once'){
-      subarea.classList.remove('visual');
-      oncearea.classList.add('visual');
-    } else {
-      oncearea.classList.remove('visual');
-      subarea.classList.add('visual');
-    }
-  });
-};
