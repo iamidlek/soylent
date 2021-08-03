@@ -766,8 +766,11 @@ a:hover .border-move{
   color: #181A19;
 }
 .radios .quantity{
-  position: absolute;
+  display: none;
+}
+.radios .quantity.visual{
   display: flex;
+  position: absolute;
   flex-direction: column;
   width: 100%;
   top: 75px;
@@ -803,16 +806,16 @@ a:hover .border-move{
   top: 38px;
   z-index: -1; /* 위에서 클릭시 select가 반응 */
 }
-.quantity h4{
+.quantity > h4{
   color: #595959;
   text-align: center; /* 본인 또는 부모요소 너비 영향*/
 }
 /* 카운트, 카트에 담기 버튼 */
 .select-box .count-box{
+  display: flex;
   width: 298px;
   height: 50px;
   position: relative;
-  display: flex;
   background-color: #221f20;
   box-sizing: border-box;
 }
