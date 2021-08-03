@@ -12,6 +12,7 @@ body {
   height: 1500px;
 }
 a{
+  font-family: Apercu,-apple-system,BlinkMacSystemFont,Segoe UI,'Roboto Mono', monospace,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   color: #212322;
   text-decoration: none;
 }
@@ -617,6 +618,7 @@ a:hover .border-move{
 .display-booth .container{
   height: 880px;
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 .display-booth .inner{
   max-width: 1280px;
@@ -639,7 +641,6 @@ a:hover .border-move{
   cursor: pointer;
   margin-bottom: 22px;
 }
-
 .display-stand .display-tab ul li.clicked{
   color: #181A19;
   font-size: 20px;
@@ -649,6 +650,12 @@ a:hover .border-move{
 
 /* slider box 1 */
 /* drink 가 클릭되면 sliderbox1 클래스 부여 할것 */
+.sliderbox{
+  display: none;
+}
+.sliderbox.active{
+  display: block;
+}
 .sliderbox p{
   font-size: 18px;
   color: #595959;
@@ -674,7 +681,6 @@ a:hover .border-move{
 }
 .sliderbox .slider .page .slide .bgimg{
   display: block;
-  background-image: url('../assets/img/slide/black.png');
   width: 400px;
   height: 298px;
   margin-bottom: 16px;
@@ -683,21 +689,36 @@ a:hover .border-move{
   background-color: #f7f7f7;
   cursor: pointer;
 }
-.sliderbox .slider .page .slide .bgimg:hover{
+.sliderbox1 .slider .page1 .slide .bgimg{
+  background-image: url('../assets/img/slide/black.png');
+}
+.sliderbox1 .slider .page1 .slide .bgimg:hover{
   background-image: url('../assets/img/slide/blackc.png');
   background-size: cover;
 }
-.sliderbox .slider .page .slide2 .bgimg{
+.sliderbox1 .slider .page1 .slide2 .bgimg{
   background-image: url('../assets/img/slide/yellow.png');
 }
-.sliderbox .slider .page .slide2 .bgimg:hover{
+.sliderbox1 .slider .page1 .slide2 .bgimg:hover{
   background-image: url('../assets/img/slide/yellowc.png');
 }
-.sliderbox .slider .page .slide3 .bgimg{
+.sliderbox1 .slider .page1 .slide3 .bgimg{
   background-image: url('../assets/img/slide/blue.png');
 }
-.sliderbox .slider .page .slide3 .bgimg:hover{
+.sliderbox1 .slider .page1 .slide3 .bgimg:hover{
   background-image: url('../assets/img/slide/bluec.png');
+}
+.sliderbox2 .slider .page1 .slide1 .bgimg{
+  background-image: url('../assets/img/slide/pow1f.png');
+}
+.sliderbox2 .slider .page1 .slide1 .bgimg:hover{
+  background-image: url('../assets/img/slide/pow2f.jpg');
+}
+.sliderbox2 .slider .page1 .slide2 .bgimg{
+  background-image: url('../assets/img/slide/pow3f.png');
+}
+.sliderbox2 .slider .page1 .slide2 .bgimg:hover{
+  background-image: url('../assets/img/slide/pow4f.jpg');
 }
 .sliderbox .slider .page .slide .bgimg + a{
   display: block;
@@ -932,6 +953,24 @@ a:hover .border-move{
 }
 .select-box .count-box:hover .add-cart::before{
   background-color: #221f20;
+}
+.display-booth .shop-all{
+  display: block;
+  width: 280px;
+  height: 55px;
+  border: 2px solid #181A19;
+  box-sizing: border-box;
+  margin: 50px auto 0;
+  text-align: center;
+  padding-top: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: 0.4s;
+}
+.display-booth .shop-all:hover{
+  color: #58c223;
+  cursor: pointer;
 }
 /* 다현 */
 

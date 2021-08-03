@@ -252,21 +252,22 @@
         <div class="display-stand">
           <div class="display-tab">
             <ul>
-              <li class="drinktab"> <!-- 클래스로 슬라이드 박스 변환-->
+              <li class="tab1 clicked"> <!-- 클래스로 슬라이드 박스 변환-->
                 <h3>Drink</h3>
               </li>
-              <li class="powdertab">
+              <li class="tab2">
                 <h3>Powder</h3>
               </li>
-              <li class="squaredtab">
+              <li class="tab3">
                 <h3>Squared</h3>
               </li>
-              <li class="merchtab">
+              <li class="tab4">
                 <h3>Merch</h3>
               </li>
             </ul>
           </div>
-          <div class="sliderbox sliderbox1">
+        <!-- drink용 슬라이드 박스 -->
+          <div class="sliderbox sliderbox1 active">
             <p>No time, no problem! Grab a complete, nutritious meal that is as healthy as it is tasty!</p>
             <div class="slider">
               <div class="page page1">
@@ -287,10 +288,10 @@
                       <p>325 Reviews</p>
                     </div>
                   </div>
-                  <div class="radiobox radiobox1">
+                  <div class="radiobox radiobox111">
                     <div class="radios">
-                      <input type="radio" id="1-1" name="choice1" value="regular" checked>
-                      <label for="1-1">
+                      <input type="radio" id="1111" name="111" value="regular" checked>
+                      <label for="1111">
                         Subscribe & Save
                       </label>
                       <p><strong>$37.05</strong> ($3.09/bottle)</p>
@@ -321,8 +322,8 @@
                       </div>
                     </div>
                     <div class="radios">
-                      <input type="radio" id="1-2" name="choice1" value="once">
-                      <label for="1-2">
+                      <input type="radio" id="1112" name="111" value="once">
+                      <label for="1112">
                         One-Time Purchase
                       </label>
                       <p><strong>$42.00</strong> ($3.50/bottle)</p>
@@ -361,10 +362,10 @@
                       <p>58 Reviews</p>
                     </div>
                   </div>
-                  <div class="radiobox radiobox2">
+                  <div class="radiobox radiobox112">
                     <div class="radios">
-                      <input type="radio" id="2-1" name="choice2" value="regular" checked>
-                      <label for="2-1">
+                      <input type="radio" id="1121" name="112" value="regular" checked>
+                      <label for="1121">
                         Subscribe & Save
                       </label>
                       <p><strong>$37.05</strong> ($3.09/bottle)</p>
@@ -395,8 +396,8 @@
                       </div>
                     </div>
                     <div class="radios">
-                      <input type="radio" id="2-2" name="choice2" value="once">
-                      <label for="2-2">
+                      <input type="radio" id="1122" name="112" value="once">
+                      <label for="1122">
                         One-Time Purchase
                       </label>
                       <p><strong>$42.00</strong> ($3.50/bottle)</p>
@@ -435,10 +436,10 @@
                       <p>35 Reviews</p>
                     </div>
                   </div>
-                  <div class="radiobox radiobox3">
+                  <div class="radiobox radiobox113">
                     <div class="radios">
-                      <input type="radio" id="3-1" name="choice3" value="regular" checked>
-                      <label for="3-1">
+                      <input type="radio" id="1131" name="113" value="regular" checked>
+                      <label for="1131">
                         Subscribe & Save
                       </label>
                       <p><strong>$37.05</strong> ($3.09/bottle)</p>
@@ -468,10 +469,9 @@
                         <h4>Subscribe & Save 11.78%</h4>
                       </div>
                     </div>
-                    
                     <div class="radios">
-                      <input type="radio" id="3-2" name="choice3" value="once">
-                      <label for="3-2">
+                      <input type="radio" id="1132" name="113" value="once">
+                      <label for="1132">
                         One-Time Purchase
                       </label>
                       <p><strong>$42.00</strong> ($3.50/bottle)</p>
@@ -492,16 +492,332 @@
                       </div>
                     </div>
                   </div>
-
-
                 </div>
               </div>
-              
+            </div>
+          </div>
+        <!-- powder용 슬라이드 박스 -->
+          <div class="sliderbox sliderbox2">
+            <p>Scoop, shake, go! Just add water to create a smooth and delicious, complete nutrition shake!</p>
+            <div class="slider">
+              <div class="page page1">
+                <!-- 첫번째 슬라이드 -->
+                <div class="slide slide1">
+                  <a class="bgimg" href=""></a>
+                  <a>Soylent Powder - Original</a>
+                  <div class="dozen">
+                    <p>7 Pouches/Case</p>
+                    <div class="evaluation">
+                      <div class="star">
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star_half</div>
+                        <div class="material-icons">star_outline</div>
+                        <div class="material-icons">star_outline</div>
+                      </div>
+                      <p>72 Reviews</p>
+                    </div>
+                  </div>
+                  <div class="radiobox radiobox211">
+                    <div class="radios">
+                      <input type="radio" id="2111" name="211" value="regular" checked>
+                      <label for="2111">
+                        Subscribe & Save
+                      </label>
+                      <p><strong>$37.05</strong> ($3.09/bottle)</p>
+                      <div class="quantity visual">
+                        <p>Deliver Every:</p>
+                        <div class="select-box">
+                          <div class="terms">
+                            <select name="duration">
+                              <option value="15" selected>15 DAYS</option>
+                              <option value="30">30 DAYS</option>
+                              <option value="45">45 DAYS</option>
+                              <option value="60">60 DAYS</option>
+                            </select>
+                            <div class="material-icons">expand_more</div>
+                          </div>
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 11.78%</h4>
+                      </div>
+                    </div>
+                    <div class="radios">
+                      <input type="radio" id="2112" name="211" value="once">
+                      <label for="2112">
+                        One-Time Purchase
+                      </label>
+                      <p><strong>$42.00</strong> ($3.50/meal)</p>
+                      <div class="quantity2">
+                        <div class="select-box">
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 17.97%</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 두번째 슬라이드 -->
+                <div class="slide slide2">
+                  <a class="bgimg" href=""></a>
+                  <a>Soylent Powder - Cacao</a>
+                  <div class="dozen">
+                    <p>7 Pouches/Case</p>
+                    <div class="evaluation">
+                      <div class="star">
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star_half</div>
+                      </div>
+                      <p>98 Reviews</p>
+                    </div>
+                  </div>
+                  <div class="radiobox radiobox212">
+                    <div class="radios">
+                      <input type="radio" id="2121" name="212" value="regular" checked>
+                      <label for="2121">
+                        Subscribe & Save
+                      </label>
+                      <p><strong>$37.05</strong> ($3.09/bottle)</p>
+                      <div class="quantity visual">
+                        <p>Deliver Every:</p>
+                        <div class="select-box">
+                          <form class="terms">
+                            <select name="duration">
+                              <option value="15" selected>15 DAYS</option>
+                              <option value="30">30 DAYS</option>
+                              <option value="45">45 DAYS</option>
+                              <option value="60">60 DAYS</option>
+                            </select>
+                            <div class="material-icons">expand_more</div>
+                          </form>
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 17.97%</h4>
+                      </div>
+                    </div>
+                    <div class="radios">
+                      <input type="radio" id="2122" name="212" value="once">
+                      <label for="2122">
+                        One-Time Purchase
+                      </label>
+                      <p><strong>$42.00</strong> ($3.50/bottle)</p>
+                      <div class="quantity2">
+                        <div class="select-box">
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 11.78%</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Squared용 슬라이드 박스 -->
+        <div class="sliderbox sliderbox3">
+          <p>A delicious and healthy snack you can take anywhere!</p>
+          <div class="slider">
+            <div class="page page1">
+              <!-- 첫번째 슬라이드 -->
+              <div class="slide slide1">
+                <a class="bgimg" href=""></a>
+                <a>Soylent Powder - Original</a>
+                <div class="dozen">
+                  <p>7 Pouches/Case</p>
+                  <div class="evaluation">
+                    <div class="star">
+                      <div class="material-icons">star</div>
+                      <div class="material-icons">star</div>
+                      <div class="material-icons">star_half</div>
+                      <div class="material-icons">star_outline</div>
+                      <div class="material-icons">star_outline</div>
+                    </div>
+                    <p>72 Reviews</p>
+                  </div>
+                </div>
+                <div class="radiobox radiobox311">
+                  <div class="radios">
+                    <input type="radio" id="3111" name="311" value="regular" checked>
+                    <label for="3111">
+                      Subscribe & Save
+                    </label>
+                    <p><strong>$37.05</strong> ($3.09/bottle)</p>
+                    <div class="quantity visual">
+                      <p>Deliver Every:</p>
+                      <div class="select-box">
+                        <div class="terms">
+                          <select name="duration">
+                            <option value="15" selected>15 DAYS</option>
+                            <option value="30">30 DAYS</option>
+                            <option value="45">45 DAYS</option>
+                            <option value="60">60 DAYS</option>
+                          </select>
+                          <div class="material-icons">expand_more</div>
+                        </div>
+                        <a class="count-box">
+                          <!-- add minus counter -->
+                          <div class="number">
+                            <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                            <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                            <input type="number" name="num" value="1" step="1" min="1" max="5">
+                          </div>
+                          <!-- Add to Cart Button -->
+                          <button class="add-cart" type="submit">Add to Cart</button>
+                        </a>
+                      </div>
+                      <h4>Subscribe & Save 11.78%</h4>
+                    </div>
+                  </div>
+                  <div class="radios">
+                    <input type="radio" id="3112" name="311" value="once">
+                    <label for="3112">
+                      One-Time Purchase
+                    </label>
+                    <p><strong>$42.00</strong> ($3.50/meal)</p>
+                    <div class="quantity2">
+                      <div class="select-box">
+                        <a class="count-box">
+                          <!-- add minus counter -->
+                          <div class="number">
+                            <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                            <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                            <input type="number" name="num" value="1" step="1" min="1" max="5">
+                          </div>
+                          <!-- Add to Cart Button -->
+                          <button class="add-cart" type="submit">Add to Cart</button>
+                        </a>
+                      </div>
+                      <h4>Subscribe & Save 10.00%</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 두번째 슬라이드 -->
+              <div class="slide slide2">
+                <a class="bgimg" href=""></a>
+                <a>Soylent Powder - Cacao</a>
+                <div class="dozen">
+                  <p>7 Pouches/Case</p>
+                  <div class="evaluation">
+                    <div class="star">
+                      <div class="material-icons">star</div>
+                      <div class="material-icons">star</div>
+                      <div class="material-icons">star</div>
+                      <div class="material-icons">star</div>
+                      <div class="material-icons">star_half</div>
+                    </div>
+                    <p>98 Reviews</p>
+                  </div>
+                </div>
+                <div class="radiobox radiobox312">
+                  <div class="radios">
+                    <input type="radio" id="3121" name="312" value="regular" checked>
+                    <label for="3121">
+                      Subscribe & Save
+                    </label>
+                    <p><strong>$37.05</strong> ($3.09/bottle)</p>
+                    <div class="quantity visual">
+                      <p>Deliver Every:</p>
+                      <div class="select-box">
+                        <form class="terms">
+                          <select name="duration">
+                            <option value="15" selected>15 DAYS</option>
+                            <option value="30">30 DAYS</option>
+                            <option value="45">45 DAYS</option>
+                            <option value="60">60 DAYS</option>
+                          </select>
+                          <div class="material-icons">expand_more</div>
+                        </form>
+                        <a class="count-box">
+                          <!-- add minus counter -->
+                          <div class="number">
+                            <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                            <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                            <input type="number" name="num" value="1" step="1" min="1" max="5">
+                          </div>
+                          <!-- Add to Cart Button -->
+                          <button class="add-cart" type="submit">Add to Cart</button>
+                        </a>
+                      </div>
+                      <h4>Subscribe & Save 17.97%</h4>
+                    </div>
+                  </div>
+                  <div class="radios">
+                    <input type="radio" id="3122" name="312" value="once">
+                    <label for="3122">
+                      One-Time Purchase
+                    </label>
+                    <p><strong>$42.00</strong> ($3.50/bottle)</p>
+                    <div class="quantity2">
+                      <div class="select-box">
+                        <a class="count-box">
+                          <!-- add minus counter -->
+                          <div class="number">
+                            <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                            <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                            <input type="number" name="num" value="1" step="1" min="1" max="5">
+                          </div>
+                          <!-- Add to Cart Button -->
+                          <button class="add-cart" type="submit">Add to Cart</button>
+                        </a>
+                      </div>
+                      <h4>Subscribe & Save 11.78%</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <a class="shop-all">SHOP ALL</a>
+        <!-- Merch용 슬라이드 박스 -->
+          <!-- <div class="sliderbox sliderbox4">
+            <p>Swag for the ultimate Soylenteer!</p>
+            <div class="slider">
+              dsfsd
+            </div>
+          </div> -->
+        </div>
       </div>
+      <a class="shop-all">SHOP ALL</a>
     </div>
   </section>
   <!-- 다현 -->
