@@ -649,13 +649,13 @@ a:hover .border-move{
 
 /* slider box 1 */
 /* drink 가 클릭되면 sliderbox1 클래스 부여 할것 */
-.sliderbox1 p{
+.sliderbox p{
   font-size: 18px;
   color: #595959;
   margin-bottom: 16px;
   position: relative;
 }
-.sliderbox1 .slider{
+.sliderbox .slider{
   width: 1320px;
   height: 578px;
   overflow: hidden;
@@ -663,13 +663,16 @@ a:hover .border-move{
   position: relative;
   left: -20px;
 }
-.sliderbox1 .slider .page1 .slide{
+.sliderbox .slider .page{
+  display: flex;
+}
+.sliderbox .slider .page .slide{
   box-sizing: border-box;
   width: 440px;
   height: 578px;
   padding: 0 20px;
 }
-.sliderbox1 .slider .page1 .slide .bgimg{
+.sliderbox .slider .page .slide .bgimg{
   display: block;
   background-image: url('../assets/img/slide/black.png');
   width: 400px;
@@ -680,17 +683,29 @@ a:hover .border-move{
   background-color: #f7f7f7;
   cursor: pointer;
 }
-.sliderbox1 .slider .page1 .slide .bgimg:hover{
+.sliderbox .slider .page .slide .bgimg:hover{
   background-image: url('../assets/img/slide/blackc.png');
   background-size: cover;
 }
-.sliderbox1 .slider .page1 .slide .bgimg + a{
+.sliderbox .slider .page .slide2 .bgimg{
+  background-image: url('../assets/img/slide/yellow.png');
+}
+.sliderbox .slider .page .slide2 .bgimg:hover{
+  background-image: url('../assets/img/slide/yellowc.png');
+}
+.sliderbox .slider .page .slide3 .bgimg{
+  background-image: url('../assets/img/slide/blue.png');
+}
+.sliderbox .slider .page .slide3 .bgimg:hover{
+  background-image: url('../assets/img/slide/bluec.png');
+}
+.sliderbox .slider .page .slide .bgimg + a{
   display: block;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 4px;
 }
-.sliderbox1 .slider .page1 .slide .dozen{
+.sliderbox .slider .page .slide .dozen{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -768,6 +783,17 @@ a:hover .border-move{
 .radios .quantity{
   display: none;
 }
+.radios .quantity2{
+  display: none;
+}
+.radios .quantity2.visual{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  top: 45px;
+  left: 0px;
+}
 .radios .quantity.visual{
   display: flex;
   position: absolute;
@@ -779,7 +805,8 @@ a:hover .border-move{
 .radiobox .radios .quantity p{
   margin-bottom: 4px;
 }
-.quantity .select-box{
+.quantity .select-box,
+.quantity2 .select-box{
   display: flex;
   justify-content: space-between;
   margin-bottom: 6px;
@@ -806,7 +833,8 @@ a:hover .border-move{
   top: 38px;
   z-index: -1; /* 위에서 클릭시 select가 반응 */
 }
-.quantity > h4{
+.quantity > h4,
+.quantity2 > h4{
   color: #595959;
   text-align: center; /* 본인 또는 부모요소 너비 영향*/
 }
