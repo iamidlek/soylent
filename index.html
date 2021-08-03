@@ -252,25 +252,26 @@
         <div class="display-stand">
           <div class="display-tab">
             <ul>
-              <li>
+              <li class="drinktab"> <!-- 클래스로 슬라이드 박스 변환-->
                 <h3>Drink</h3>
               </li>
-              <li>
+              <li class="powdertab">
                 <h3>Powder</h3>
               </li>
-              <li>
+              <li class="squaredtab">
                 <h3>Squared</h3>
               </li>
-              <li>
+              <li class="merchtab">
                 <h3>Merch</h3>
               </li>
             </ul>
           </div>
-          <div class="sliderbox1">
+          <div class="sliderbox sliderbox1">
             <p>No time, no problem! Grab a complete, nutritious meal that is as healthy as it is tasty!</p>
             <div class="slider">
-              <div class="page1">
-                <div class="slide">
+              <div class="page page1">
+                <!-- 첫번째 슬라이드 -->
+                <div class="slide slide1">
                   <a class="bgimg" href=""></a>
                   <a>Soylent Drink Creamy Chocolate</a>
                   <div class="dozen">
@@ -286,10 +287,84 @@
                       <p>325 Reviews</p>
                     </div>
                   </div>
-                  <div class="radiobox">
+                  <div class="radiobox radiobox1">
                     <div class="radios">
-                      <input type="radio" id="subsc" name="choice" value="regular" checked>
-                      <label for="subsc">
+                      <input type="radio" id="1-1" name="choice1" value="regular" checked>
+                      <label for="1-1">
+                        Subscribe & Save
+                      </label>
+                      <p><strong>$37.05</strong> ($3.09/bottle)</p>
+                      <div class="quantity visual">
+                        <p>Deliver Every:</p>
+                        <div class="select-box">
+                          <div class="terms">
+                            <select name="duration">
+                              <option value="15" selected>15 DAYS</option>
+                              <option value="30">30 DAYS</option>
+                              <option value="45">45 DAYS</option>
+                              <option value="60">60 DAYS</option>
+                            </select>
+                            <div class="material-icons">expand_more</div>
+                          </div>
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 11.78%</h4>
+                      </div>
+                    </div>
+                    <div class="radios">
+                      <input type="radio" id="1-2" name="choice1" value="once">
+                      <label for="1-2">
+                        One-Time Purchase
+                      </label>
+                      <p><strong>$42.00</strong> ($3.50/bottle)</p>
+                      <div class="quantity2">
+                        <div class="select-box">
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 11.78%</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 두번째 슬라이드 -->
+                <div class="slide slide2">
+                  <a class="bgimg" href=""></a>
+                  <a>Soylent Drink Banana</a>
+                  <div class="dozen">
+                    <p>12 Bottles</p>
+                    <div class="evaluation">
+                      <div class="star">
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star_half</div>
+                      </div>
+                      <p>58 Reviews</p>
+                    </div>
+                  </div>
+                  <div class="radiobox radiobox2">
+                    <div class="radios">
+                      <input type="radio" id="2-1" name="choice2" value="regular" checked>
+                      <label for="2-1">
                         Subscribe & Save
                       </label>
                       <p><strong>$37.05</strong> ($3.09/bottle)</p>
@@ -297,7 +372,7 @@
                         <p>Deliver Every:</p>
                         <div class="select-box">
                           <form class="terms">
-                            <select id="duration" name="duration">
+                            <select name="duration">
                               <option value="15" selected>15 DAYS</option>
                               <option value="30">30 DAYS</option>
                               <option value="45">45 DAYS</option>
@@ -310,7 +385,81 @@
                             <div class="number">
                               <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
                               <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
-                              <input type="number" id="num" name="num" value="1" step="1" min="1" max="5">
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 11.78%</h4>
+                      </div>
+                    </div>
+                    <div class="radios">
+                      <input type="radio" id="2-2" name="choice2" value="once">
+                      <label for="2-2">
+                        One-Time Purchase
+                      </label>
+                      <p><strong>$42.00</strong> ($3.50/bottle)</p>
+                      <div class="quantity2">
+                        <div class="select-box">
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 11.78%</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 세번째 슬라이드 -->
+                <div class="slide slide3">
+                  <a class="bgimg" href=""></a>
+                  <a>Soylent Drink Vanilla</a>
+                  <div class="dozen">
+                    <p>12 Bottles</p>
+                    <div class="evaluation">
+                      <div class="star">
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star</div>
+                        <div class="material-icons">star_half</div>
+                      </div>
+                      <p>35 Reviews</p>
+                    </div>
+                  </div>
+                  <div class="radiobox radiobox3">
+                    <div class="radios">
+                      <input type="radio" id="3-1" name="choice3" value="regular" checked>
+                      <label for="3-1">
+                        Subscribe & Save
+                      </label>
+                      <p><strong>$37.05</strong> ($3.09/bottle)</p>
+                      <div class="quantity visual">
+                        <p>Deliver Every:</p>
+                        <div class="select-box">
+                          <form class="terms">
+                            <select name="duration">
+                              <option value="15" selected>15 DAYS</option>
+                              <option value="30">30 DAYS</option>
+                              <option value="45">45 DAYS</option>
+                              <option value="60">60 DAYS</option>
+                            </select>
+                            <div class="material-icons">expand_more</div>
+                          </form>
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
                             </div>
                             <!-- Add to Cart Button -->
                             <button class="add-cart" type="submit">Add to Cart</button>
@@ -321,40 +470,37 @@
                     </div>
                     
                     <div class="radios">
-                      <input type="radio" id="onetime" name="choice" value="once">
-                      <label for="onetime">
+                      <input type="radio" id="3-2" name="choice3" value="once">
+                      <label for="3-2">
                         One-Time Purchase
                       </label>
                       <p><strong>$42.00</strong> ($3.50/bottle)</p>
                       <div class="quantity2">
-
+                        <div class="select-box">
+                          <a class="count-box">
+                            <!-- add minus counter -->
+                            <div class="number">
+                              <button class="mi" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                              <button class="pl" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                              <input type="number" name="num" value="1" step="1" min="1" max="5">
+                            </div>
+                            <!-- Add to Cart Button -->
+                            <button class="add-cart" type="submit">Add to Cart</button>
+                          </a>
+                        </div>
+                        <h4>Subscribe & Save 11.78%</h4>
                       </div>
                     </div>
                   </div>
 
 
                 </div>
-                <div class="slide">
-
-                </div>
-                <div class="slide">
-
-                </div>
               </div>
-              <div class="page2">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div class="page3">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
+              
             </div>
           </div>
         </div>
-        <a class="shop-all"></a>
+        <a class="shop-all">SHOP ALL</a>
       </div>
     </div>
   </section>
