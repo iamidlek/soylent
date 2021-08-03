@@ -141,3 +141,20 @@ for(let i=0;i<tabEls.length;i++){
     tabEls[i].classList.add('clicked');
   });
 };
+
+// 선택 이벤트 영역
+const radioEl = document.querySelector('.radiobox');
+// 보일 영역
+const area1 = document.querySelector('.quantity');
+const area2 = document.querySelector('.quantity2');
+
+radioEl.addEventListener('click', function () {
+  // 선택된 라디오 값 확인
+  if (document.querySelector('input[name="choice"]:checked').value == 'once') {
+  area1.classList.remove('visual');
+  area2.classList.add('visual');
+  } else {
+    area2.classList.remove('visual');
+    area1.classList.add('visual');
+  }
+});
