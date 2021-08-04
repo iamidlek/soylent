@@ -672,6 +672,7 @@ a:hover .border-move{
 }
 .sliderbox .slider .page{
   display: flex;
+  position: relative;
 }
 .sliderbox .slider .page .slide{
   box-sizing: border-box;
@@ -954,13 +955,70 @@ a:hover .border-move{
 .select-box .count-box:hover .add-cart::before{
   background-color: #221f20;
 }
+.slide-status{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-status .slide-bar{
+  width: 100%;
+  height: 0.4px;
+  background-color: #d3d3d3;
+  display: flex;
+  align-items: center;
+}
+
+.arrow{
+  width: 31px;
+  height: 21px;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow > div{
+  width: 20px;
+  height: 1.5px;
+  background-color: #212322;
+  position: relative;
+}
+.arrow > div::before{
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #212322;
+  border-left: 2px solid #212322;
+}
+.left-arrow > div::before{
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 0;
+  top: -4.5px;
+}
+.right-arrow > div::before{
+  position: absolute;
+  transform: rotate(135deg);
+  left: 9px;
+  top: -4.5px;
+}
+.slide-status .maxed {
+  pointer-events: none;
+}
+.slide-status .maxed > div{
+  background-color: #a8a8a8;
+}
+.slide-status .maxed > div::before{
+  border-color: #a8a8a8;
+}
+
 .display-booth .shop-all{
   display: block;
   width: 280px;
   height: 55px;
-  border: 2px solid #181A19;
+  border: 2px solid #212322;
   box-sizing: border-box;
-  margin: 50px auto 0;
+  margin: 0 auto;
   text-align: center;
   padding-top: 14px;
   font-size: 16px;
