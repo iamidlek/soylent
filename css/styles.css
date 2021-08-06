@@ -9,7 +9,7 @@ body {
   letter-spacing: 0;
   box-sizing: border-box;
 
-  height: 1500px;
+  height: 3000px;
 }
 a{
   font-family: Apercu,-apple-system,BlinkMacSystemFont,Segoe UI,'Roboto Mono', monospace,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
@@ -653,6 +653,11 @@ a:hover .border-move{
 .sliderbox{
   display: none;
 }
+.sliderbox .move-box{
+  position: relative;
+  left: 0;
+  display: flex;
+}
 .sliderbox.active{
   display: block;
 }
@@ -665,13 +670,14 @@ a:hover .border-move{
 .sliderbox .slider{
   width: 1320px;
   height: 578px;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   position: relative;
   left: -20px;
 }
 .sliderbox .slider .page{
   display: flex;
+  position: relative;
 }
 .sliderbox .slider .page .slide{
   box-sizing: border-box;
@@ -954,13 +960,78 @@ a:hover .border-move{
 .select-box .count-box:hover .add-cart::before{
   background-color: #221f20;
 }
+.slide-status{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-status .slide-bar{
+  width: 100%;
+  height: 0.4px;
+  background-color: #d3d3d3;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/* 슬라이드 바의 길이를 page 수만큼 나누어서.. */
+/* 이동은 버튼과 함께? 자동 계산 */
+.slide-bar .nation-bar{
+  width: 0;
+  height: 0.4px;
+  position: absolute;
+  background-color: #181A19;
+}
+.arrow{
+  width: 31px;
+  height: 21px;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow > div{
+  width: 20px;
+  height: 1.5px;
+  background-color: #212322;
+  position: relative;
+}
+.arrow > div::before{
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #212322;
+  border-left: 2px solid #212322;
+}
+.left-arrow > div::before{
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 0;
+  top: -4.5px;
+}
+.right-arrow > div::before{
+  position: absolute;
+  transform: rotate(135deg);
+  left: 9px;
+  top: -4.5px;
+}
+.slide-status .maxed {
+  pointer-events: none;
+}
+.slide-status .maxed > div{
+  background-color: #a8a8a8;
+}
+.slide-status .maxed > div::before{
+  border-color: #a8a8a8;
+}
+
 .display-booth .shop-all{
   display: block;
   width: 280px;
   height: 55px;
-  border: 2px solid #181A19;
+  border: 2px solid #212322;
   box-sizing: border-box;
-  margin: 50px auto 0;
+  margin: 0 auto;
   text-align: center;
   padding-top: 14px;
   font-size: 16px;
