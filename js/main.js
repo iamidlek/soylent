@@ -177,8 +177,47 @@ for(let s=1; s <= slideboxELs.length; s++){
         }
       });
     };
-    a += slides
+    a = slides
   };
 }
-
 // ${s,p,i} 는 안됨
+
+
+// 슬라이드 구현
+const Rarrow = document.querySelector('.slide-status .right-arrow');
+const Larrow = document.querySelector('.slide-status .left-arrow');
+
+let pageMax = document.querySelectorAll('.sliderbox.active .page').length;
+let moveBox = document.querySelector('.sliderbox.active .move-box');
+let currentpage = 1
+
+// pagenation
+
+Rarrow.addEventListener('click', function () {
+  let position = parseInt(window.getComputedStyle(moveBox).left);
+  currentpage += 1;
+  if (currentpage == pageMax) {
+    Rarrow.classList.add('maxed');
+    moveBox.style.transition = "left " + 200 + "ms";
+    moveBox.style.left = (position - 1320)+"px";
+  } else {
+    Larrow.classList.remove('maxed');
+    Rarrow.classList.remove('maxed');
+    moveBox.style.transition = "left " + 200 + "ms";
+    moveBox.style.left = (position - 1320)+"px";
+  }
+});
+Larrow.addEventListener('click', function () {
+  let position = parseInt(window.getComputedStyle(moveBox).left);
+  currentpage -= 1;
+  if (currentpage == 1) {
+    Larrow.classList.add('maxed');
+    moveBox.style.transition = "left " + 200 + "ms";
+    moveBox.style.left = (position + 1320)+"px";
+  } else {
+    Larrow.classList.remove('maxed');
+    Rarrow.classList.remove('maxed');
+    moveBox.style.transition = "left " + 200 + "ms";
+    moveBox.style.left = (position + 1320)+"px";
+  }
+});
