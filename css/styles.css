@@ -670,7 +670,7 @@ a:hover .border-move{
 .sliderbox .slider{
   width: 1320px;
   height: 578px;
-  /* overflow: hidden; */
+  overflow: hidden;
   display: flex;
   position: relative;
   left: -20px;
@@ -960,11 +960,31 @@ a:hover .border-move{
 .select-box .count-box:hover .add-cart::before{
   background-color: #221f20;
 }
+
+/* slide 4 */
+.sliderbox4 .slider .slide .radios .quantity{
+  top: 52px;
+}
+.sliderbox4 .slider .slide .terms > select{
+  width: 174%;
+}
+.sliderbox4 .slider .noselect .radios .quantity{
+  top: 40px;
+}
+.sliderbox4 .slider .noselect .select-box .count-box{
+  width: 100%;
+}
+
+.footslide{
+  height: 80px;
+  display: block;
+}
 .slide-status{
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .slide-status .slide-bar{
   width: 100%;
@@ -980,6 +1000,7 @@ a:hover .border-move{
   width: 0;
   height: 0.4px;
   position: absolute;
+  left: 0;
   background-color: #181A19;
 }
 .arrow{
