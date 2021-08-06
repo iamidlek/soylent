@@ -9,7 +9,7 @@ body {
   letter-spacing: 0;
   box-sizing: border-box;
 
-  height: 1500px;
+  height: 3000px;
 }
 a{
   font-family: Apercu,-apple-system,BlinkMacSystemFont,Segoe UI,'Roboto Mono', monospace,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
@@ -653,6 +653,11 @@ a:hover .border-move{
 .sliderbox{
   display: none;
 }
+.sliderbox .move-box{
+  position: relative;
+  left: 0;
+  display: flex;
+}
 .sliderbox.active{
   display: block;
 }
@@ -665,7 +670,7 @@ a:hover .border-move{
 .sliderbox .slider{
   width: 1320px;
   height: 578px;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   position: relative;
   left: -20px;
@@ -967,8 +972,16 @@ a:hover .border-move{
   background-color: #d3d3d3;
   display: flex;
   align-items: center;
+  position: relative;
 }
-
+/* 슬라이드 바의 길이를 page 수만큼 나누어서.. */
+/* 이동은 버튼과 함께? 자동 계산 */
+.slide-bar .nation-bar{
+  width: 0;
+  height: 0.4px;
+  position: absolute;
+  background-color: #181A19;
+}
 .arrow{
   width: 31px;
   height: 21px;
