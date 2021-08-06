@@ -252,17 +252,17 @@
         <div class="display-stand">
           <div class="display-tab">
             <ul>
-              <li class="tab1 clicked">
+              <li class="tab tab1 clicked">
                 <!-- 클래스로 슬라이드 박스 변환-->
                 <h3>Drink</h3>
               </li>
-              <li class="tab2">
+              <li class="tab tab2">
                 <h3>Powder</h3>
               </li>
-              <li class="tab3">
+              <li class="tab tab3">
                 <h3>Squared</h3>
               </li>
-              <li class="tab4">
+              <li class="tab tab4">
                 <h3>Merch</h3>
               </li>
             </ul>
@@ -1376,6 +1376,20 @@
                 </div>
               </div>
             </div>
+            <div class="footslide">
+              <div class="slide-status">
+                <div class="slide-bar">
+                  <div class="nation-bar">
+                  </div>
+                </div>
+                <div class="arrow left-arrow maxed">
+                  <div></div>
+                </div>
+                <div class="arrow right-arrow">
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- powder용 슬라이드 박스 -->
           <div class="sliderbox sliderbox2">
@@ -1537,6 +1551,20 @@
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="footslide">
+              <div class="slide-status">
+                <div class="slide-bar">
+                  <div class="nation-bar">
+                  </div>
+                </div>
+                <div class="arrow left-arrow maxed">
+                  <div></div>
+                </div>
+                <div class="arrow right-arrow">
+                  <div></div>
                 </div>
               </div>
             </div>
@@ -1704,24 +1732,318 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Merch용 슬라이드 박스 -->
-          <!-- <div class="sliderbox sliderbox4">
-            <p>Swag for the ultimate Soylenteer!</p>
-            <div class="slider">
-              dsfsd
-            </div>
-          </div> -->
-          <div class="slide-status">
-            <div class="slide-bar">
-              <div class="nation-bar">
+            <div class="footslide">
+              <div class="slide-status">
+                <div class="slide-bar">
+                  <div class="nation-bar">
+                  </div>
+                </div>
+                <div class="arrow left-arrow maxed">
+                  <div></div>
+                </div>
+                <div class="arrow right-arrow">
+                  <div></div>
+                </div>
               </div>
             </div>
-            <div class="arrow left-arrow maxed">
-              <div></div>
+          </div>
+          <!-- Merch용 슬라이드 박스 -->
+          <div class="sliderbox sliderbox4">
+            <p>Swag for the ultimate Soylenteer!</p>
+            <div class="slider">
+              <div class="move-box">
+                <div class="page page1">
+                  <!-- 첫번째 슬라이드 -->
+                  <div class="slide slide1">
+                    <a class="bgimg" href=""></a>
+                    <a>T-Shirt</a>
+                    <div class="dozen">
+                      <p></p>
+                      <div class="evaluation">
+                        <div class="star">
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star_half</div>
+                        </div>
+                        <p>1 Reviews</p>
+                      </div>
+                    </div>
+                    <div class="radiobox">
+                      <div class="radios">
+                        <p><strong>$37.05</strong></p>
+                        <div class="quantity visual">
+                          <p>Size</p>
+                          <div class="select-box">
+                            <div class="terms">
+                              <select name="duration">
+                                <option value="X5" selected>X5</option>
+                                <option value="X">X</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                              </select>
+                              <div class="material-icons">expand_more</div>
+                            </div>
+                            <a class="count-box">
+                              <!-- add minus counter -->
+                              <div class="number">
+                                <button class="mi"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                                <button class="pl"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                                <input type="number" name="num" value="1" step="1" min="1" max="5">
+                              </div>
+                              <!-- Add to Cart Button -->
+                              <button class="add-cart" type="submit">Add to Cart</button>
+                            </a>
+                          </div>
+                          <h4></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 두번째 슬라이드 -->
+                  <div class="slide slide2 noselect">
+                    <a class="bgimg" href=""></a>
+                    <a>T-Shirt</a>
+                    <div class="dozen">
+                      <p></p>
+                      <div class="evaluation">
+                        <div class="star">
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star_half</div>
+                        </div>
+                        <p>1 Reviews</p>
+                      </div>
+                    </div>
+                    <div class="radiobox">
+                      <div class="radios">
+                        <p><strong>$37.05</strong></p>
+                        <div class="quantity visual">
+                          <div class="select-box">
+                            <a class="count-box">
+                              <!-- add minus counter -->
+                              <div class="number">
+                                <button class="mi"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                                <button class="pl"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                                <input type="number" name="num" value="1" step="1" min="1" max="5">
+                              </div>
+                              <!-- Add to Cart Button -->
+                              <button class="add-cart" type="submit">Add to Cart</button>
+                            </a>
+                          </div>
+                          <h4></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 세번째 슬라이드 -->
+                  <div class="slide slide2 noselect">
+                    <a class="bgimg" href=""></a>
+                    <a>T-Shirt</a>
+                    <div class="dozen">
+                      <p></p>
+                      <div class="evaluation">
+                        <div class="star">
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star_half</div>
+                        </div>
+                        <p>1 Reviews</p>
+                      </div>
+                    </div>
+                    <div class="radiobox">
+                      <div class="radios">
+                        <p><strong>$37.05</strong></p>
+                        <div class="quantity visual">
+                          <div class="select-box">
+                            <a class="count-box">
+                              <!-- add minus counter -->
+                              <div class="number">
+                                <button class="mi"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                                <button class="pl"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                                <input type="number" name="num" value="1" step="1" min="1" max="5">
+                              </div>
+                              <!-- Add to Cart Button -->
+                              <button class="add-cart" type="submit">Add to Cart</button>
+                            </a>
+                          </div>
+                          <h4></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page page2">
+                  <!-- 첫번째 슬라이드 -->
+                  <div class="slide slide1 noselect">
+                    <a class="bgimg" href=""></a>
+                    <a>T-Shirt</a>
+                    <div class="dozen">
+                      <p></p>
+                      <div class="evaluation">
+                        <div class="star">
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star_half</div>
+                        </div>
+                        <p>1 Reviews</p>
+                      </div>
+                    </div>
+                    <div class="radiobox">
+                      <div class="radios">
+                        <p><strong>$37.05</strong></p>
+                        <div class="quantity visual">
+                          <div class="select-box">
+                            <a class="count-box">
+                              <!-- add minus counter -->
+                              <div class="number">
+                                <button class="mi"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                                <button class="pl"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                                <input type="number" name="num" value="1" step="1" min="1" max="5">
+                              </div>
+                              <!-- Add to Cart Button -->
+                              <button class="add-cart" type="submit">Add to Cart</button>
+                            </a>
+                          </div>
+                          <h4></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 두번째 슬라이드 -->
+                  <div class="slide slide2">
+                    <a class="bgimg" href=""></a>
+                    <a>T-Shirt</a>
+                    <div class="dozen">
+                      <p></p>
+                      <div class="evaluation">
+                        <div class="star">
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star_half</div>
+                        </div>
+                        <p>1 Reviews</p>
+                      </div>
+                    </div>
+                    <div class="radiobox">
+                      <div class="radios">
+                        <p><strong>$37.05</strong></p>
+                        <div class="quantity visual">
+                          <p>Size</p>
+                          <div class="select-box">
+                            <div class="terms">
+                              <select name="duration">
+                                <option value="X5" selected>X5</option>
+                                <option value="X">X</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                              </select>
+                              <div class="material-icons">expand_more</div>
+                            </div>
+                            <a class="count-box">
+                              <!-- add minus counter -->
+                              <div class="number">
+                                <button class="mi"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                                <button class="pl"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                                <input type="number" name="num" value="1" step="1" min="1" max="5">
+                              </div>
+                              <!-- Add to Cart Button -->
+                              <button class="add-cart" type="submit">Add to Cart</button>
+                            </a>
+                          </div>
+                          <h4></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 세번째 슬라이드 -->
+                  <div class="slide slide3">
+                    <a class="bgimg" href=""></a>
+                    <a>T-Shirt</a>
+                    <div class="dozen">
+                      <p></p>
+                      <div class="evaluation">
+                        <div class="star">
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star</div>
+                          <div class="material-icons">star_half</div>
+                        </div>
+                        <p>1 Reviews</p>
+                      </div>
+                    </div>
+                    <div class="radiobox">
+                      <div class="radios">
+                        <p><strong>$37.05</strong></p>
+                        <div class="quantity visual">
+                          <p>Size</p>
+                          <div class="select-box">
+                            <div class="terms">
+                              <select name="duration">
+                                <option value="X5" selected>X5</option>
+                                <option value="X">X</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                              </select>
+                              <div class="material-icons">expand_more</div>
+                            </div>
+                            <a class="count-box">
+                              <!-- add minus counter -->
+                              <div class="number">
+                                <button class="mi"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                                <button class="pl"
+                                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                                <input type="number" name="num" value="1" step="1" min="1" max="5">
+                              </div>
+                              <!-- Add to Cart Button -->
+                              <button class="add-cart" type="submit">Add to Cart</button>
+                            </a>
+                          </div>
+                          <h4></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="arrow right-arrow">
-              <div></div>
+            <div class="footslide">
+              <div class="slide-status">
+                <div class="slide-bar">
+                  <div class="nation-bar">
+                  </div>
+                </div>
+                <div class="arrow left-arrow maxed">
+                  <div></div>
+                </div>
+                <div class="arrow right-arrow">
+                  <div></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
