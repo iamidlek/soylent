@@ -157,7 +157,7 @@ for(let i=0;i<tabEls.length;i++){
 
 // 반복문을 활요한 슬라이드 라디오 버튼에 따른 폼 변경
 // radiobox , name 의 뒤에는 이하의 규칙으로 작성한다
-for(let s=1; s <= slideboxELs.length; s++){
+for(let s=1; s < slideboxELs.length; s++){
   let pages = document.querySelectorAll(`.sliderbox${s} .page`);
   let slides = 0;
   let a = 0;
@@ -184,40 +184,59 @@ for(let s=1; s <= slideboxELs.length; s++){
 
 
 // 슬라이드 구현
-const Rarrow = document.querySelector('.slide-status .right-arrow');
-const Larrow = document.querySelector('.slide-status .left-arrow');
 
-let pageMax = document.querySelectorAll('.sliderbox.active .page').length;
-let moveBox = document.querySelector('.sliderbox.active .move-box');
-let currentpage = 1
-
-// pagenation
-
-Rarrow.addEventListener('click', function () {
-  let position = parseInt(window.getComputedStyle(moveBox).left);
-  currentpage += 1;
-  if (currentpage == pageMax) {
-    Rarrow.classList.add('maxed');
-    moveBox.style.transition = "left " + 200 + "ms";
-    moveBox.style.left = (position - 1320)+"px";
+for (let s = 1; s <= slideboxELs.length; s++) {
+  const pageMax = document.querySelectorAll(`.sliderbox${s} .page`).length;
+  console.log(pageMax)
+  const moveBox = document.querySelector(`.sliderbox${s} .move-box`);
+  if (pageMax == 1){
+    const nonslide = document.querySelector(`.sliderbox${s} .slide-status`)
+    nonslide.style.display = "none";
   } else {
-    Larrow.classList.remove('maxed');
-    Rarrow.classList.remove('maxed');
-    moveBox.style.transition = "left " + 200 + "ms";
-    moveBox.style.left = (position - 1320)+"px";
+    const Rarrow = document.querySelector(`.sliderbox${s} .right-arrow`);
+    const Larrow = document.querySelector(`.sliderbox${s} .left-arrow`);
+    let currentpage = 1
+    Rarrow.addEventListener('click', function () {
+      let position = parseFloat(window.getComputedStyle(moveBox).left);
+      currentpage += 1;
+      if (currentpage == pageMax) {
+        Rarrow.classList.add('maxed');
+        Larrow.classList.remove('maxed');
+        moveBox.style.transition = "left " + 200 + "ms";
+        moveBox.style.left = (position - 1320) + "px";
+      } else {
+        Larrow.classList.remove('maxed');
+        Rarrow.classList.remove('maxed');
+        moveBox.style.transition = "left " + 200 + "ms";
+        moveBox.style.left = (position - 1320) + "px";
+      }
+    });
+    Larrow.addEventListener('click', function () {
+      let position = parseInt(window.getComputedStyle(moveBox).left);
+      currentpage -= 1;
+      if (currentpage == 1) {
+        Larrow.classList.add('maxed');
+        Rarrow.classList.remove('maxed');
+        moveBox.style.transition = "left " + 200 + "ms";
+        moveBox.style.left = (position + 1320) + "px";
+      } else {
+        Larrow.classList.remove('maxed');
+        Rarrow.classList.remove('maxed');
+        moveBox.style.transition = "left " + 200 + "ms";
+        moveBox.style.left = (position + 1320) + "px";
+      }
+    });
   }
-});
-Larrow.addEventListener('click', function () {
-  let position = parseInt(window.getComputedStyle(moveBox).left);
-  currentpage -= 1;
-  if (currentpage == 1) {
-    Larrow.classList.add('maxed');
-    moveBox.style.transition = "left " + 200 + "ms";
-    moveBox.style.left = (position + 1320)+"px";
-  } else {
-    Larrow.classList.remove('maxed');
-    Rarrow.classList.remove('maxed');
-    moveBox.style.transition = "left " + 200 + "ms";
-    moveBox.style.left = (position + 1320)+"px";
-  }
-});
+}
+
+// 탭의 클릭을 감지하면?
+
+
+
+//  새로운 li 추가 하는 법? 알아보자
+// for(let n=0; n<pageMax; n++ ){
+//   const makeLI = document.createElement('LI');
+//   makeLI.dataset.order = j;
+//   if(j == 0){makeLI.classList.add('on');}
+//   pager.appendChild(makeLI);
+// }//for
