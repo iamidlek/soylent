@@ -183,8 +183,8 @@ for(let s=1; s < slideboxELs.length; s++){
 // ${s,p,i} 는 안됨
 
 
-
 // 페이지 네이션
+// slideWidth 값을 선언해서 파라미터로 넣어 줄 수 도 있음
 function Pgnt(parent,pageMax,n){
   const li = document.createElement("li")
   const a = document.createElement("a");
@@ -260,6 +260,28 @@ for (let s = 1; s <= slideboxELs.length; s++) {
         moveBox.style.left = (position + 1320) + "px";
       }
     });
-
+    for (let n = 1; n <= pageMax; n++){
+      const nowhe = document.querySelector(`.sliderbox${s} .nation${n}`);
+      nowhe.addEventListener('click',function(){
+        for (let w = 1; w <= pageMax; w++){
+          let removhere = document.querySelector(`.sliderbox${s} .nation${w}`)
+          removhere.classList.remove('nowhere')
+        };
+        nowhe.classList.add('nowhere')
+        moveBox.style.left = (-1320 * (n-1)) + "px";
+        currentpage = n
+        if (n == pageMax){
+          Rarrow.classList.add('maxed');
+          Larrow.classList.remove('maxed');
+        } else if (n == 1){
+          Larrow.classList.add('maxed');
+          Rarrow.classList.remove('maxed')
+        } else {
+          Larrow.classList.remove('maxed');
+          Rarrow.classList.remove('maxed');
+        }
+      });
+    }
   }
 }
+
