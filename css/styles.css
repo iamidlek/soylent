@@ -1012,7 +1012,11 @@ a:hover .border-move{
   display: block;
   height: 100%;
   background-color: #d3d3d3;
-  transition: .3;
+  /* -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear; */
+  transition: all .3s linear;
+  cursor: pointer;
 }
 .slide-bar .nation-bar li a.nowhere{
   background-color: #181A19;
@@ -1024,6 +1028,7 @@ a:hover .border-move{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .arrow > div{
   width: 20px;
