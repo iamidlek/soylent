@@ -997,10 +997,24 @@ a:hover .border-move{
 /* 슬라이드 바의 길이를 page 수만큼 나누어서.. */
 /* 이동은 버튼과 함께? 자동 계산 */
 .slide-bar .nation-bar{
-  width: 0;
+  width: 100%;
   height: 0.4px;
+  display: flex;
   position: absolute;
   left: 0;
+  background-color: transparent;
+}
+.slide-bar .nation-bar li{
+  position: relative;
+  list-style: none;
+}
+.slide-bar .nation-bar li a{
+  display: block;
+  height: 100%;
+  background-color: #d3d3d3;
+  transition: .3;
+}
+.slide-bar .nation-bar li a.nowhere{
   background-color: #181A19;
 }
 .arrow{
