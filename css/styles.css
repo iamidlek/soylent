@@ -670,7 +670,7 @@ a:hover .border-move{
 .sliderbox .slider{
   width: 1320px;
   height: 578px;
-  /* overflow: hidden; */
+  overflow: hidden;
   display: flex;
   position: relative;
   left: -20px;
@@ -960,11 +960,31 @@ a:hover .border-move{
 .select-box .count-box:hover .add-cart::before{
   background-color: #221f20;
 }
+
+/* slide 4 */
+.sliderbox4 .slider .slide .radios .quantity{
+  top: 52px;
+}
+.sliderbox4 .slider .slide .terms > select{
+  width: 174%;
+}
+.sliderbox4 .slider .noselect .radios .quantity{
+  top: 40px;
+}
+.sliderbox4 .slider .noselect .select-box .count-box{
+  width: 100%;
+}
+
+.footslide{
+  height: 80px;
+  display: block;
+}
 .slide-status{
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .slide-status .slide-bar{
   width: 100%;
@@ -977,9 +997,24 @@ a:hover .border-move{
 /* 슬라이드 바의 길이를 page 수만큼 나누어서.. */
 /* 이동은 버튼과 함께? 자동 계산 */
 .slide-bar .nation-bar{
-  width: 0;
+  width: 100%;
   height: 0.4px;
+  display: flex;
   position: absolute;
+  left: 0;
+  background-color: transparent;
+}
+.slide-bar .nation-bar li{
+  position: relative;
+  list-style: none;
+}
+.slide-bar .nation-bar li a{
+  display: block;
+  height: 100%;
+  background-color: #d3d3d3;
+  transition: .3;
+}
+.slide-bar .nation-bar li a.nowhere{
   background-color: #181A19;
 }
 .arrow{
