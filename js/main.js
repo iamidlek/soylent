@@ -199,7 +199,6 @@ function Pgnt(parent,pageMax,n){
 
 // 슬라이드 구현
 
-
 for (let s = 1; s <= slideboxELs.length; s++) {
   const pageMax = document.querySelectorAll(`.sliderbox${s} .page`).length;
   const moveBox = document.querySelector(`.sliderbox${s} .move-box`);
@@ -217,7 +216,7 @@ for (let s = 1; s <= slideboxELs.length; s++) {
     }
 
     let currentpage = 1
-    Rarrow.addEventListener('click', function () {
+    Rarrow.addEventListener('click', _.debounce(function () {
       let position = parseFloat(window.getComputedStyle(moveBox).left);
       currentpage += 1;
       let pagenation = document.querySelector(`.sliderbox${s} .nation${currentpage}`)
@@ -237,8 +236,8 @@ for (let s = 1; s <= slideboxELs.length; s++) {
         moveBox.style.transition = "left " + 200 + "ms";
         moveBox.style.left = (position - 1320) + "px";
       }
-    });
-    Larrow.addEventListener('click', function () {
+    }, 210));
+    Larrow.addEventListener('click', _.debounce(function () {
       let position = parseInt(window.getComputedStyle(moveBox).left);
       currentpage -= 1;
       let pagenation = document.querySelector(`.sliderbox${s} .nation${currentpage}`)
@@ -259,7 +258,7 @@ for (let s = 1; s <= slideboxELs.length; s++) {
         moveBox.style.transition = "left " + 200 + "ms";
         moveBox.style.left = (position + 1320) + "px";
       }
-    });
+    }, 210));
     for (let n = 1; n <= pageMax; n++){
       const nowhe = document.querySelector(`.sliderbox${s} .nation${n}`);
       nowhe.addEventListener('click',function(){
@@ -284,4 +283,3 @@ for (let s = 1; s <= slideboxELs.length; s++) {
     }
   }
 }
-
