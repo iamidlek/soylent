@@ -654,7 +654,7 @@ a:hover .border-move{
   display: none;
 }
 .sliderbox .move-box{
-  position: relative;
+  position: absolute;
   left: 0;
   display: flex;
 }
