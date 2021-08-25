@@ -1084,7 +1084,248 @@ a:hover .border-move{
   cursor: pointer;
 }
 /* 다현 */
+.dahyun_part{
+	display: flex;
+	flex-direction: column;
+	padding: 50px 0;
+	font-size: 10px;
+}
+.Why_Soylent_territory{
+	box-sizing: border-box;
+	padding: 0 20px;
+	margin: auto;
+	max-width: 1280px;
+}
+@media (min-width: 768px){
+	.Why_Soylent_territory{
+		width: 760px;
+	}
+}
+@media (min-width: 992px){
+	.Why_Soylent_territory{
+		width: 980px;
+	}
+}
+@media (min-width: 1200px){
+	.Why_Soylent_territory{
+		padding: 0;
+		width: 1180px;
+		max-width: 1280px;
+	}
+}
+@media (min-width: 1480px){
+	.Why_Soylent_territory{
+		width: 1440px;
+	}
+}
+.Why_Soylent{
+	display: flex;
+	flex-direction: column-reverse;
+}
+@media (min-width: 768px){
+	.Why_Soylent{
+		flex-direction: row;
+		justify-content: center;
+		align-content: stretch;
+	}
+}
+.Why_Soylent .WS_left_side{
+	display: block;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	padding: 20px 20px 23px;
+	background-color: rgb(243, 243, 243);
+}
+/* 화면너비 768px ~ 991px */
+@media (min-width: 768px){
+	.Why_Soylent .WS_left_side{
+		padding: 20px 20px 31px 35px; 
+		width: 50%;
+	}
+}
+/* 화면너비 992px ~ 1199px */
+@media (min-width: 992px) {
+	.Why_Soylent .WS_left_side{
+		padding: 30px 30px 30px 51px;
+	}
+}
+/* 화면너비 1200px ~ */
+@media (min-width: 1200px){
+	.Why_Soylent .WS_left_side{
+		padding: 30px;
+		width: 426px;
+	}
+}
+.Why_Soylent .WS_left_side h4{
+	margin: 0 0 10px 0;
+	font-size: 2.5em;
+	font-weight: 700;
+}
+@media (min-width: 992px) {
+	.Why_Soylent .WS_left_side h4{
+	font-size: 3em;
+	margin: 0 0 15px 0;
+	}
+}
+.Why_Soylent .WS_left_side .WS_context{
+	word-break: normal;
+	font-size: 1.5em;
+	font-weight: 400;
+	text-align: left;
+	margin: 0 0 10px 0;
+}
+@media (min-width: 992px) {
+	.Why_Soylent .WS_left_side .WS_context{
+		font-size: 1.8em;
+		margin: 0 0 15px 0;
+	}
+}
+@media (min-width: 1200px){
+	.Why_Soylent .WS_left_side .WS_context{
+		margin: 0 0 20px 0;
+	}
+}
+.Why_Soylent .WS_left_side .WS_list{
+	margin: 0 0 60px 0;
+	padding: 0;
+	align-content: space-between;
+}
+.Why_Soylent .WS_left_side .WS_list > li{
+	display: flex;
+	align-items: center;	
+}
+.Why_Soylent .WS_left_side .WS_list > li:not(li:last-child){
+	margin-bottom: 15px;
+}
+.Why_Soylent .WS_left_side .WS_list > li > img{
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+.Why_Soylent .WS_left_side .WS_list > li > h5{
+	font-size: 1.3em;
+	margin: 0;
+}
+@media (min-width: 992px) {
+	.Why_Soylent .WS_left_side .WS_list > li > h5{
+		font-size: 1.8em;
+	}
+}
+.Why_Soylent .WS_left_side .button_content{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+@media (min-width: 768px){
+	.Why_Soylent .WS_left_side .button_content{
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+}
+.Why_Soylent .WS_left_side .button_content .WS_learnmore{
+	display: block;
+	position: relative;
+	background-color: white;
+	box-sizing: border-box;
+	width: 100%;
+	height: 46px;
+	padding: 12px;
+	margin-bottom: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-size: 1.6em;
+	font-weight: 700;
+	letter-spacing: .1em;
+}
+@media (min-width: 768px){
+	.Why_Soylent .WS_left_side .button_content .WS_learnmore{
+		width: 153px;
+		margin-right: 15px;
+	}
+}
+@media (min-width: 992px) {
+	.Why_Soylent .WS_left_side .button_content .WS_learnmore{
+		width: 232px;
+		margin-right: 20px;
+    margin-bottom: 0;
+	}
+}
+.Why_Soylent .WS_left_side .button_content .WS_learnmore::before{
+	position: absolute;
+	content: "";
+	border: 2px solid black;
+	top: 0; /*부모요소의 값은 못받아오는 경우 존재, 값을 0으로 주기*/
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.Why_Soylent .WS_left_side .button_content .WS_learnmore:hover::before{
+	position: absolute;
+	content: "";
+	border: 2px solid black;
+	top: 7px;
+	left: 7px;
+	bottom: 7px;
+	right: 7px;
+	transition: .15s ease-in;
+}
+.Why_Soylent .WS_left_side .button_content .WS_shopnow{
+	position: relative;
+	text-decoration: none;
+	color: black;
+	font-size: 1.3em;
+	font-weight: 700;
+}
+.Why_Soylent .WS_left_side .button_content .WS_shopnow::before{
+	position: absolute;
+	background-color: black;
+	content: "";
+	bottom: -5px;
+	box-sizing: border-box;
+	border-top: 2px solid black;
+	width: 100%;
+}
+.Why_Soylent .WS_right_side{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	vertical-align: middle;
+	height: 187px;
+}
+@media (min-width: 768px){
+	.Why_Soylent .WS_right_side{
+		width: 50%;
+		height: auto;
+	}
+}
+@media (min-width: 1200px){
+	.Why_Soylent .WS_right_side{
+		width: calc(100% - 426px);
+		height: auto;
+		overflow: hidden;
+		vertical-align: middle;
+	}
+}
+.Why_Soylent .WS_right_side > img {
+	position: absolute;
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+/**/
+/* .Perk_of_Subscribing{
+	display: flex;
+}
+.Good_For_You{
+	display: flex;
 
+}
+.Soylent_Products_Fit{
+	display: flex;
+} */
 
 
 /* 보미 */
